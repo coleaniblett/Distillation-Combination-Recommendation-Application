@@ -1,0 +1,50 @@
+body {
+    background-color: #722f37;
+  }
+
+/* Style the form elements */
+form {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Style the drop-down input boxes */
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #b3a695;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #b3a695;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  appearance: none;
+}
+  /* Style the input box labels */
+label {
+  color: #b3a695;;
+}
+  
+  /* Style the submit button */
+button {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #b3a695;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #b3a695;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  font-style: italic;
+}
+  
+  /* Change the background color of the submit button on hover */
+form button:hover {
+  background-color: #333;
+}

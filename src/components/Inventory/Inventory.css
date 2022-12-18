@@ -1,0 +1,18 @@
+h2, li {
+  color: #b3a695;
+  font-family: 'GB Gormand';
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+li button{
+  border: none;
+  width: 10px;
+
+}
+
+li {
+  list-style-type: none;
+}

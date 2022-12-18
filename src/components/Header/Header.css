@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600&display=swap');
+
+h1, h3 {
+  color: #b3a695;
+  font-family:'EB Garamond';
+}
+
+h1 {
+  font-size: 100px;
+}
+
+h3 {
+  font-size: 30px;
+}
