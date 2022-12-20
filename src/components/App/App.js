@@ -3,24 +3,17 @@ import './App.css';
 import {Form} from '../Form/Form';
 import {Header} from '../Header/Header';
 import {Inventory} from '../Inventory/Inventory';
+import { UseIngredients } from '../UseIngredients/UseIngredients';
 
 function App() {
-  const [ingredients, setIngredients] = useState([]);
-
-  const addIngredient = ingredient => {
-    setIngredients([...ingredients, ingredient]);
-    console.log(ingredient);
-  };
-
-  const handleRemoveIngredient = id => {
-    setIngredients(ingredients.filter(ingredient => ingredient.id !== id));
-  };
+  const { ingredients, addIngredient, removeIngredient } = UseIngredients();
 
   return (
     <div className="App">
+      {console.log("App rendering")}
       <Header />
       <Form onSubmit={addIngredient}/>
-      <Inventory ingredients={ingredients} onRemoveIngredient={handleRemoveIngredient} />
+      <Inventory ingredients={ingredients} onRemoveIngredient={removeIngredient} />
     </div>
   );
 }
