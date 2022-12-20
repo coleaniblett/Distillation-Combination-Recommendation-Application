@@ -43,6 +43,11 @@ button {
   cursor: pointer;
   font-style: italic;
 }
+
+  /* Style the selection buttons */
+.selection-button {
+  width: 20%;
+}
   
   /* Change the background color of the submit button on hover */
 form button:hover {
