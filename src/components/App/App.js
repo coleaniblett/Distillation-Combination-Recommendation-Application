@@ -5,11 +5,12 @@ import {Header} from '../Header/Header';
 import {Inventory} from '../Inventory/Inventory';
 
 function App() {
-  const [ingredients, setIngredients] = useState([
-    { id: 1, name: 'flour' },
-    { id: 2, name: 'sugar' },
-    { id: 3, name: 'butter' },
-  ]);
+  const [ingredients, setIngredients] = useState([]);
+
+  const addIngredient = ingredient => {
+    setIngredients([...ingredients, ingredient]);
+    console.log(ingredient);
+  };
 
   const handleRemoveIngredient = id => {
     setIngredients(ingredients.filter(ingredient => ingredient.id !== id));
@@ -18,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Form />
+      <Form onSubmit={addIngredient}/>
       <Inventory ingredients={ingredients} onRemoveIngredient={handleRemoveIngredient} />
     </div>
   );
