@@ -4,8 +4,13 @@ export function UseIngredients() {
   const [ingredients, setIngredients] = useState([]);
 
   const addIngredient = useCallback(ingredient => {
-    setIngredients(prevIngredients => [...prevIngredients, ingredient]);
-  }, [setIngredients]);
+    if (ingredients.some(oldIngredient => oldIngredient.name === ingredient.name)) {
+      window.alert(`Your inventory already includes ${ingredient.name}`);
+    }
+    else {
+      setIngredients(prevIngredients => [...prevIngredients, ingredient]);
+    }
+  }, [setIngredients, ingredients]);
 
   const removeIngredient = useCallback(id => {
     setIngredients(prevIngredients => prevIngredients.filter(ingredient => ingredient.id !== id));
