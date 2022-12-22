@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './Form.css';
-import {Ingredients} from '../Ingredients/Ingredients';
-import {Dropdown} from '../Dropdown/Dropdown'
+import { Ingredients } from '../Ingredients/Ingredients';
+import { Dropdown } from '../Dropdown/Dropdown'
 
 const {liquors, liqueurs, mixers} = Ingredients;
 
@@ -12,14 +12,19 @@ export const Form = ({ onSubmit }) => {
 
   function handleSubmit(event) {
     event.preventDefault();
-    onSubmit({ ...formData, id: Date.now() });
+    if (formData.name === undefined || formData.name === "") {
+      window.alert("No option selected");
+    }
+    else {
+      document.getElementById("cocktail-form").reset();
+      onSubmit({ ...formData, id: Date.now() });
+      formData.name = "";
+    }
   }
 
   function handleChange(event) {
-    const {className, value} = event.target;
-    if (value != "") {
-      setFormData(prevFormData => ({ ...prevFormData, ["name"]: value}));
-    }
+    const {value} = event.target;
+    setFormData(prevFormData => ({ ...prevFormData, "name": value}));
   }
 
    function handleSelection(event) {
