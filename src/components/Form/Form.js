@@ -5,7 +5,7 @@ import { Dropdown } from '../Dropdown/Dropdown'
 
 const {liquors, liqueurs, mixers} = Ingredients;
 
-export const Form = ({ onSubmit }) => {
+export const Form = ({ onAdd, onSubmit }) => {
   const [formData, setFormData] = useState({});
   const [selectionName, setSelectionName] = useState("Liquors");
   const [selection, setSelection] = useState(liquors);
@@ -17,7 +17,7 @@ export const Form = ({ onSubmit }) => {
     }
     else {
       document.getElementById("cocktail-form").reset();
-      onSubmit({ ...formData, id: Date.now() });
+      onAdd({ ...formData, id: Date.now() });
       formData.name = "";
     }
   }
@@ -39,6 +39,10 @@ export const Form = ({ onSubmit }) => {
     }
   }
 
+  function handleInventorySubmit(event) {
+    onSubmit();
+  }
+
   return (
     <form id="cocktail-form">
       <button type="button" className="selection-button" onClick={handleSelection} id="Liquors">Liquors</button>
@@ -47,7 +51,7 @@ export const Form = ({ onSubmit }) => {
       <Dropdown choices={selection} choicesName={selectionName} selectIngredient={handleChange}/>
       <button type="submit" onClick={handleSubmit}>Add ingredients to inventory</button><br/>
       <br/>
-      <button type="submit">Submit inventory</button>
+      <button type="button" onClick={handleInventorySubmit}>Submit inventory</button>
     </form>
   );
 }
