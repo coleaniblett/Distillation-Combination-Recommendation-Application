@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react';
 
 export function UseIngredients() {
   const [ingredients, setIngredients] = useState([]);
+  const [submitted, setSubmitted] = useState(false);
 
   const addIngredient = useCallback(ingredient => {
     if (ingredients.some(oldIngredient => oldIngredient.name === ingredient.name)) {
@@ -16,5 +17,9 @@ export function UseIngredients() {
     setIngredients(prevIngredients => prevIngredients.filter(ingredient => ingredient.id !== id));
   }, [setIngredients]);
 
-  return { ingredients, addIngredient, removeIngredient };
+  const submitIngredients = () => {
+    setSubmitted(true);
+  }
+
+  return { ingredients, submitted, addIngredient, removeIngredient, submitIngredients };
 }
