@@ -3,7 +3,7 @@ import './Form.css';
 import { Ingredients } from '../Ingredients/Ingredients';
 import { Dropdown } from '../Dropdown/Dropdown'
 
-const {liquors, liqueurs, mixers} = Ingredients;
+const {liquors, wines, liqueurs, mixers} = Ingredients;
 
 export const Form = ({ onAdd, onSubmit }) => {
   const [formData, setFormData] = useState({});
@@ -34,6 +34,8 @@ export const Form = ({ onAdd, onSubmit }) => {
       setSelection(liquors);
     } else if (id === "Liqueurs") {
       setSelection(liqueurs);
+    } else if (id === "Wines") {
+      setSelection(wines);
     } else if (id === "Mixers") {
       setSelection(mixers);
     }
@@ -46,6 +48,7 @@ export const Form = ({ onAdd, onSubmit }) => {
   return (
     <form id="cocktail-form">
       <button type="button" className="selection-button" onClick={handleSelection} id="Liquors">Liquors</button>
+      <button type="button" className="selection-button" onClick={handleSelection} id="Wines">Wines</button>
       <button type="button" className="selection-button" onClick={handleSelection} id="Liqueurs">Liqueurs</button>
       <button type="button" className="selection-button" onClick={handleSelection} id="Mixers">Mixers</button>
       <Dropdown choices={selection} choicesName={selectionName} selectIngredient={handleChange}/>
