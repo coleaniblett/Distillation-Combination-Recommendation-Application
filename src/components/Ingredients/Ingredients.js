@@ -16,6 +16,7 @@ export const Ingredients = {
   ],
   wines: [
     "Cabernet Sauvignon",
+    "Champagne",  
     "Chardonnay",
     "Gewürztraminer",
     "Malbec",
