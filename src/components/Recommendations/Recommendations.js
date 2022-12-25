@@ -3,7 +3,7 @@ import axios, { all } from 'axios';
 
 export const Recommendations = ({ ingredients }) => {
   const [cocktails, setCocktails] = useState([]);
-  const names = ingredients.map(ingredient => ingredient.name);
+  const names = ingredients.map(ingredient => ingredient.name.toLowerCase());
 
   useEffect(() => {
     filterCocktails().then(filteredCocktails => {
@@ -53,7 +53,7 @@ export const Recommendations = ({ ingredients }) => {
     })
     let i = 1;
     while (response.data.drinks[0][`strIngredient${i}`]) {
-      const newIngredient = response.data.drinks[0][`strIngredient${i}`];
+      const newIngredient = response.data.drinks[0][`strIngredient${i}`].toLowerCase();
       cocktailIngredients.push(newIngredient);
       i++;
     }
