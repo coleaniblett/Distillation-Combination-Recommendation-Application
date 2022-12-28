@@ -7,16 +7,24 @@ export const Ingredients = {
     // Consider combining Absolute ingredients into generic "vodka"
     /* Absolut Citron included in:
         - 9 1/2 Weeks
+          - Inspired by movie
+          - Common enough to care about inclusion?
         - Absolut Evergreen
+          - Common enough to care about inclusion?
         - Absolut Limousine
+          - Somewhat known
         - Absolut Summertime
+          - Not made with Absolut Citron, on Absolute Drinks website
         - Absolutly Screwed Up
+          - Not always done with Absolut Citron
         - Cosmopolitan
+          - Should not be Absolut specific
         - Lemon Shot
+          - Should not be Absolut specific
         - New York Lemonade
     */
     "Absolut Citron",
-    /* Absolut Kuran included in:
+    /* Absolut Kurant included in:
         - 1-900-FUK-MEUP
         - Absolut Sex
         - Kurant Tea
@@ -384,7 +392,6 @@ export const Ingredients = {
     "Vanilla Extract",
     "Vanilla Syrup",
     "Vanilla",
-    "Water",
     "Watermelon",
     "Whipped Cream",
     "Whipping Cream",

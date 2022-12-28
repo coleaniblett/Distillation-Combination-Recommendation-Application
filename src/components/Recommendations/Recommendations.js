@@ -35,7 +35,7 @@ export const Recommendations = ({ ingredients }) => {
     for (const cocktail of cocktails) {
       const cocktailIngredients = await getCocktailIngredients(cocktail);
       for (const cocktailIngredient of cocktailIngredients) {
-        if (!names.includes(cocktailIngredient)) {
+        if (!names.includes(cocktailIngredient) && cocktailIngredient != "water") {
           cocktailsToRemove.push(cocktail);
         }
       }
