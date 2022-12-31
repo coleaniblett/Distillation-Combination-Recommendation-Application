@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.124033ac.css",
-    "main.js": "/static/js/main.2dfe82c6.js",
-    "static/js/787.ec09bd06.chunk.js": "/static/js/787.ec09bd06.chunk.js",
-    "index.html": "/index.html",
-    "main.124033ac.css.map": "/static/css/main.124033ac.css.map",
-    "main.2dfe82c6.js.map": "/static/js/main.2dfe82c6.js.map",
-    "787.ec09bd06.chunk.js.map": "/static/js/787.ec09bd06.chunk.js.map"
+    "main.css": "/Distillation-Combination-Recommendation-Application/static/css/main.124033ac.css",
+    "main.js": "/Distillation-Combination-Recommendation-Application/static/js/main.8535de6d.js",
+    "static/js/787.ec09bd06.chunk.js": "/Distillation-Combination-Recommendation-Application/static/js/787.ec09bd06.chunk.js",
+    "index.html": "/Distillation-Combination-Recommendation-Application/index.html",
+    "main.124033ac.css.map": "/Distillation-Combination-Recommendation-Application/static/css/main.124033ac.css.map",
+    "main.8535de6d.js.map": "/Distillation-Combination-Recommendation-Application/static/js/main.8535de6d.js.map",
+    "787.ec09bd06.chunk.js.map": "/Distillation-Combination-Recommendation-Application/static/js/787.ec09bd06.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.124033ac.css",
-    "static/js/main.2dfe82c6.js"
+    "static/js/main.8535de6d.js"
   ]
 }
