@@ -49,15 +49,21 @@ export const Form = ({ onAdd, onSubmit }) => {
 
   return (
     <form id="cocktail-form">
-      <button type="button" className="selection-button" onClick={handleSelection} id="Liquors">Liquors</button>
-      <button type="button" className="selection-button" onClick={handleSelection} id="Beers">Beers</button>
-      <button type="button" className="selection-button" onClick={handleSelection} id="Wines">Wines</button>
-      <button type="button" className="selection-button" onClick={handleSelection} id="Liqueurs">Liqueurs</button>
-      <button type="button" className="selection-button" onClick={handleSelection} id="Mixers">Mixers</button>
+      <div className="button-container">
+        <div className="button-grouping">
+          <button type="button" className="selection-button" onClick={handleSelection} id="Liquors">Liquors</button>
+          <button type="button" className="selection-button" onClick={handleSelection} id="Beers">Beers</button>
+        </div>
+        <div className="button-grouping">
+          <button type="button" className="selection-button" onClick={handleSelection} id="Wines">Wines</button>
+          <button type="button" className="selection-button" onClick={handleSelection} id="Liqueurs">Liqueurs</button>
+          <button type="button" className="selection-button" onClick={handleSelection} id="Mixers">Mixers</button>
+        </div>
+      </div>
       <Dropdown choices={selection} choicesName={selectionName} selectIngredient={handleChange}/>
-      <button type="submit" onClick={handleSubmit}>Add ingredients to inventory</button><br/>
+      <button type="submit" className="submission-button" onClick={handleSubmit}>Add ingredients to inventory</button><br/>
       <br/>
-      <button type="button" onClick={handleInventorySubmit}>Submit inventory</button>
+      <button type="button" className="submission-button" id="submit-inventory" onClick={handleInventorySubmit}>Submit inventory</button>
     </form>
   );
 }

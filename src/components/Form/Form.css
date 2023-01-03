@@ -1,15 +1,42 @@
+@media only screen and (max-width: 500px) {
+  #cocktail-form {
+    width: 450px;
+  }
+  #submit-inventory {
+    position: relative;
+    bottom: 10px;
+  }
+  .submission-button {
+    margin: 0;
+    position: relative;
+    bottom: 5px;
+  }
+  .selection-button {
+    width: 60px;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  #cocktail-form {
+    width: 400px;
+  }
+  #Liqueurs {
+    padding-left: 7px;
+  }
+}
+
 body {
     background-color: #722f37;
   }
 
-/* Style the form elements */
 form {
     width: 500px;
     margin: 0 auto;
     text-align: center;
+    box-sizing: border-box;
   }
   
-  /* Style the drop-down input boxes */
 select {
   width: 100%;
   padding: 12px 20px;
@@ -23,12 +50,11 @@ select {
   font-size: 16px;
   appearance: none;
 }
-  /* Style the input box labels */
+
 label {
   color: #b3a695;;
 }
   
-  /* Style the submit button */
 button {
   width: 50%;
   padding: 12px 20px;
@@ -44,12 +70,10 @@ button {
   font-style: italic;
 }
 
-  /* Style the selection buttons */
 .selection-button {
   width: 20%;
 }
   
-  /* Change the background color of the submit button on hover */
 form button:hover {
   background-color: #333;
 }

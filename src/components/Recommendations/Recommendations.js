@@ -1,14 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import axios, { all } from 'axios';
+import './Recommendations.css';
 
 export const Recommendations = ({ ingredients }) => {
   const [cocktails, setCocktails] = useState([]);
+  const [loading, setLoading] = useState(true);
   const names = ingredients.map(ingredient => ingredient.name.toLowerCase());
 
-  useEffect(() => {
+  /*useEffect(() => {
     filterCocktails().then(filteredCocktails => {
       setCocktails(filteredCocktails);
     });
+  }, []);*/
+
+  useEffect(() => {
+    async function fetchRecommendations() {
+      // Fetch recommendations and set the cocktails state
+      const recommendations = await filterCocktails(names, ingredients);
+      setCocktails(recommendations);
+      setLoading(false);
+    }
+
+    fetchRecommendations();
   }, []);
 
   async function getCocktails(names) {
@@ -60,14 +73,17 @@ export const Recommendations = ({ ingredients }) => {
     return cocktailIngredients;
   }
 
-  return (
-    <div>
+  if (loading) {
+    return <div id="loading-message">Loading recommendations...</div>;
+  } else if (cocktails.length === 0) {
+    return <div>No recommendations found</div>;
+  } else {
+    return (
       <ul>
         {cocktails.map(cocktail => (
           <li key={cocktail}>{cocktail}</li>
         ))}
       </ul>
-    </div>
-  );
-
+    );
+  }
 }

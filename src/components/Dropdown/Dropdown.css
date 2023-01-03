@@ -1,0 +1,7 @@
+@media only screen and (max-width: 530px) {
+  #dropdown {
+    width: 80%;
+    margin: auto;
+    box-sizing: border-box;
+  }
+}

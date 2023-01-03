@@ -1,4 +1,5 @@
 import React from 'react';
+import './Dropdown.css';
 
 export const Dropdown = ({ choices, choicesName, selectIngredient }) => {
   return (

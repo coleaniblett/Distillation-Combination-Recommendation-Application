@@ -6,6 +6,17 @@ import { Inventory } from '../Inventory/Inventory';
 import { UseIngredients } from '../UseIngredients/UseIngredients';
 import { RecommendationsList } from '../RecommendationsList/ReceommendationsList';
 
+/*
+    TO-DO
+  1. Review ingredients, write generalizer function
+  2. Split mixers into mixers and garnishes
+  3. Develop two additional recommendation lists (one-ingredient-away and fine-without-garnish)
+  4. Add clickable functionality to cocktail recommendations
+  5. "No recommendations found" output
+  6. Add user instructions
+  7. Look up to-do compiler
+*/
+
 function App() {
   const { ingredients, submitted, addIngredient, removeIngredient, submitIngredients } = UseIngredients();
 
