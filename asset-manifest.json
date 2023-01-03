@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Distillation-Combination-Recommendation-Application/static/css/main.6c70c586.css",
+    "main.css": "/Distillation-Combination-Recommendation-Application/static/css/main.546dfefb.css",
     "main.js": "/Distillation-Combination-Recommendation-Application/static/js/main.681c3cb2.js",
     "static/js/787.ec09bd06.chunk.js": "/Distillation-Combination-Recommendation-Application/static/js/787.ec09bd06.chunk.js",
     "index.html": "/Distillation-Combination-Recommendation-Application/index.html",
-    "main.6c70c586.css.map": "/Distillation-Combination-Recommendation-Application/static/css/main.6c70c586.css.map",
+    "main.546dfefb.css.map": "/Distillation-Combination-Recommendation-Application/static/css/main.546dfefb.css.map",
     "main.681c3cb2.js.map": "/Distillation-Combination-Recommendation-Application/static/js/main.681c3cb2.js.map",
     "787.ec09bd06.chunk.js.map": "/Distillation-Combination-Recommendation-Application/static/js/787.ec09bd06.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c70c586.css",
+    "static/css/main.546dfefb.css",
     "static/js/main.681c3cb2.js"
   ]
 }
