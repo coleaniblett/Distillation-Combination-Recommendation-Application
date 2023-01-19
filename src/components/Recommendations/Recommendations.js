@@ -6,12 +6,8 @@ export const Recommendations = ({ ingredients }) => {
   const [cocktails, setCocktails] = useState([]);
   const [loading, setLoading] = useState(true);
   const names = ingredients.map(ingredient => ingredient.name.toLowerCase());
-
-  /*useEffect(() => {
-    filterCocktails().then(filteredCocktails => {
-      setCocktails(filteredCocktails);
-    });
-  }, []);*/
+  // water and various garnishes are to be ignored as ingredients
+  const ingredientsToIgnore = ["water", "lemon", "lemon peel", "lime", "lime peel"];
 
   useEffect(() => {
     async function fetchRecommendations() {
@@ -48,7 +44,7 @@ export const Recommendations = ({ ingredients }) => {
     for (const cocktail of cocktails) {
       const cocktailIngredients = await getCocktailIngredients(cocktail);
       for (const cocktailIngredient of cocktailIngredients) {
-        if (!names.includes(cocktailIngredient) && cocktailIngredient != "water") {
+        if (!names.includes(cocktailIngredient) && !ingredientsToIgnore.includes(cocktailIngredient)) {
           cocktailsToRemove.push(cocktail);
         }
       }
