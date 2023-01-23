@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Distillation-Combination-Recommendation-Application/static/css/main.2bf2ed27.css",
-    "main.js": "/Distillation-Combination-Recommendation-Application/static/js/main.a42d644b.js",
+    "main.css": "/Distillation-Combination-Recommendation-Application/static/css/main.22dc5d09.css",
+    "main.js": "/Distillation-Combination-Recommendation-Application/static/js/main.52afd264.js",
     "static/js/787.ec09bd06.chunk.js": "/Distillation-Combination-Recommendation-Application/static/js/787.ec09bd06.chunk.js",
     "index.html": "/Distillation-Combination-Recommendation-Application/index.html",
-    "main.2bf2ed27.css.map": "/Distillation-Combination-Recommendation-Application/static/css/main.2bf2ed27.css.map",
-    "main.a42d644b.js.map": "/Distillation-Combination-Recommendation-Application/static/js/main.a42d644b.js.map",
+    "main.22dc5d09.css.map": "/Distillation-Combination-Recommendation-Application/static/css/main.22dc5d09.css.map",
+    "main.52afd264.js.map": "/Distillation-Combination-Recommendation-Application/static/js/main.52afd264.js.map",
     "787.ec09bd06.chunk.js.map": "/Distillation-Combination-Recommendation-Application/static/js/787.ec09bd06.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2bf2ed27.css",
-    "static/js/main.a42d644b.js"
+    "static/css/main.22dc5d09.css",
+    "static/js/main.52afd264.js"
   ]
 }
