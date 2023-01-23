@@ -1,9 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Adobe+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
+
+@media only screen and (min-width: 761px) {
+  .title {
+    font-size: 100px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tagline {
+    font-size: 30px;
+  }
+}
 
 @media only screen and (max-width: 760px) {
   .title {
     font-size: 80px;
+  }
+  .tagline {
+    font-size: 25px;
   }
 }
 
@@ -23,24 +37,19 @@
   .title {
     font-size: 45px;
   }
+  .tagline {
+    font-size: 20px;
+  }
 }
 
-h1 {
-  display: flex;
-  justify-content: center;
-}
-
-h1, h3 {
+.header {
   color: #b3a695;
   font-family:'EB Garamond', 'Adobe Garamond', Georgia;
   font-style: italic;
   text-align: center;
 }
 
-h1 {
-  font-size: 100px;
-}
-
-h3 {
-  font-size: 30px;
+.title {
+  display: flex;
+  justify-content: center;
 }
