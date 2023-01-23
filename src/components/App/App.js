@@ -4,7 +4,7 @@ import { Header } from '../Header/Header';
 import { Form } from '../Form/Form';
 import { Inventory } from '../Inventory/Inventory';
 import { UseIngredients } from '../UseIngredients/UseIngredients';
-import { RecommendationsList } from '../RecommendationsList/ReceommendationsList';
+import { RecommendationsList } from '../RecommendationsList/RecommendationsList';
 
 /*
     TO-DO
