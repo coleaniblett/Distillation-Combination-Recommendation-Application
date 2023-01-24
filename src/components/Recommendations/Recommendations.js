@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import axios, { all } from 'axios';
 import './Recommendations.css';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { IngredientGeneralizer } from '../IngredientGeneralizer/IngredientGeneralizer';
 
 export const Recommendations = ({ ingredients }) => {
   const [cocktails, setCocktails] = useState([]);
   const [loading, setLoading] = useState(true);
   const names = ingredients.map(ingredient => ingredient.name.toLowerCase());
+  const ingredientGeneralizer = IngredientGeneralizer;
   // water and various garnishes are to be ignored as ingredients
   const ingredientsToIgnore = ["water", "lemon", "lemon peel", "lime", "lime peel"];
 
   useEffect(() => {
     async function fetchRecommendations() {
-      // Fetch recommendations and set the cocktails state
       const recommendations = await filterCocktails(names, ingredients);
       setCocktails(recommendations);
       setLoading(false);
@@ -43,7 +44,11 @@ export const Recommendations = ({ ingredients }) => {
     const cocktailsToRemove = [];
     for (const cocktail of cocktails) {
       const cocktailIngredients = await getCocktailIngredients(cocktail);
-      for (const cocktailIngredient of cocktailIngredients) {
+      for (let cocktailIngredient of cocktailIngredients) {
+        if (ingredientGeneralizer[cocktailIngredient]) {
+          console.log("Generalizing ingredient");
+          cocktailIngredient = IngredientGeneralizer[cocktailIngredient];
+        }
         if (!names.includes(cocktailIngredient) && !ingredientsToIgnore.includes(cocktailIngredient)) {
           cocktailsToRemove.push(cocktail);
         }
