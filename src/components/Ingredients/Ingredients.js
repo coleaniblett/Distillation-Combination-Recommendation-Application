@@ -1,55 +1,12 @@
 export const Ingredients = {
   liquors: [
     "151 Proof Rum",
-    // Combine with "Anejo Rum"
     "Añejo Rum",
     "Absinthe",
-    // Consider combining Absolute ingredients into generic "vodka"
-    /* Absolut Citron included in:
-        - 9 1/2 Weeks
-          - Inspired by movie
-          - Common enough to care about inclusion?
-        - Absolut Evergreen
-          - Common enough to care about inclusion?
-        - Absolut Limousine
-          - Somewhat known
-        - Absolut Summertime
-          - Not made with Absolut Citron, on Absolute Drinks website
-        - Absolutly Screwed Up
-          - Not always done with Absolut Citron
-        - Cosmopolitan
-          - Should not be Absolut specific
-        - Lemon Shot
-          - Should not be Absolut specific
-        - New York Lemonade
-    */
-    "Absolut Citron",
-    /* Absolut Kurant included in:
-        - 1-900-FUK-MEUP
-        - Absolut Sex
-        - Kurant Tea
-    */
-    "Absolut Kurant",
-    /* Absolut Peppar included in:
-        - Fahrenheit 5000
-    */
-    "Absolut Peppar",
-    /* Absolut Vodka included in:
-        - Absolut Stress #2
-        - Absolutely Cranberry Smash
-        - Arizona Stingers
-        - AT&T
-          - Name seems to reference Absolut Vodka, Tanqueray Gin, and Tonic
-          - Common enough to care about inclusion?
-        - Lemon Drop
-          - Should not be Absolut specific
-    */
-    "Absolut Vodka",
-    "Advocaat",
+    "Applejack",
     "Apple Brandy",
     "Apricot Brandy",
     "Aquavit",
-    "Bacardi Limon",
     "Blackberry Brandy",
     "Blackstrap Rum",
     "Blended Scotch",
@@ -63,19 +20,14 @@ export const Ingredients = {
     "Cognac",
     "Corona",
     "Cranberry Vodka",
-    "Crown Royal",
     "Dark Rum",
     "Everclear",
     "Firewater",
     "Gin",
     "Gold Rum",
     "Gold Tequila",
-    "Grain Alcohol",
     "Irish Whiskey",
-    "Islay Single Malt Scotch",
-    "Jack Daniels",
-    "Jim Beam",
-    "Johnnie Walker",
+    "Lemon Rum",
     "Lemon Vodka",
     "Light Rum",
     "Lime Vodka",
@@ -93,21 +45,18 @@ export const Ingredients = {
     "Sloe gin",
     "Soju",
     "Spiced rum",
-    "Tennessee Whiskey",
     "Tequila",
     "Vanilla Vodka",
     "Vodka",
     "Whiskey",
-    "Whisky",
     "White Rum",
-    "Wild Turkey",
-    "Zima",
   ],
   beers: [
     "Ale",
     "Beer",
     "Guinness Stout",
     "Lager",
+    "Zima"
   ],
   wines: [
     "Champagne",  
@@ -125,6 +74,7 @@ export const Ingredients = {
     "Wine"
   ],
   liqueurs: [
+    "Advocaat",
     "Amaretto",
     "Amaro Montenegro",
     "Anisette",
@@ -205,87 +155,33 @@ export const Ingredients = {
   mixers: [
     "7-Up",
     "Agave Syrup",
-    "Allspice",
-    "Almond Flavoring",
-    "Almond",
-    "Angelica Root",
-    "Angostura Bitters",
-    "Anis",
     "Apple Cider",
     "Apple Juice",
-    "Apple",
-    "Applejack",
     "Apricot Nectar",
-    "Apricot",
-    "Asafoetida",
-    "Banana",
-    "Basil",
-    "Berries",
-    "Bitter Lemon",
-    "Bitters",
-    "Black pepper",
-    "Blackberries",
     "Blackcurrant Cordial",
-    "Blackcurrant Squash",
-    "Blood Orange",
-    "Blueberries",
-    "Brown sugar",
-    "Butter",
-    "Candy",
-    "Cantaloupe",
-    "Caramel Coloring",
-    "Caramel Sauce",
     "Carbonated Soft Drink",
     "Carbonated Water",
-    "Cardamom",
-    "Carrot",
-    "Cayenne Pepper",
-    "Celery Salt",
-    "Cherries",
     "Cherry Grenadine",
     "Cherry Juice",
-    "Cherry",
-    "Chocolate Sauce",
-    "Chocolate Ice-Cream",
     "Chocolate milk",
-    "Chocolate syrup",
-    "Chocolate",
     "Cider",
-    "Cinnamon",
-    "Cloves",
     "Club Soda",
     "Coca-Cola",
-    "Cocoa Powder",
     "Coconut Milk",
-    "Coconut Syrup",
     "Coffee",
     "Condensed Milk",
-    "Coriander",
-    "Corn Syrup",
-    "Cornstarch",
-    "Cranberries",
     "Cranberry Juice",
     "Cream of Coconut",
     "Cream",
-    "Cucumber",
-    "Cumin Seed",
     "Daiquiri Mix",
-    "Demerara Sugar",
     "Dr. Pepper",
-    "Egg White",
-    "Egg Yolk",
-    "Egg",
     "Elderflower Cordial",
     "Espresso",
-    "Fennel seeds",
-    "Figs",
-    "Food Coloring",
     "Fresca",
     "Fresh Lemon Juice",
     "Fresh Lime Juice",
     "Fruit Juice",
     "Fruit Punch",
-    "Fruit",
     "Ginger Beer",
     "Ginger Syrup",
     "Ginger Ale",
@@ -310,14 +206,18 @@ export const Ingredients = {
     "Kool-Aid",
     "Lavender",
     "Lemon Juice",
+    // garnish
     "Lemon Peel",
+    // garnish
     "Lemon",
     "Lemon-Lime Soda",
     "Lemonade",
     "Licorice Root",
     "Lime Juice",
     "Lime Juice Cordial",
+    // garnish
     "Lime Peel",
+    // garnish
     "Lime",
     "Limeade",
     "Light Cream",
@@ -336,8 +236,11 @@ export const Ingredients = {
     "Olive",
     "Orange Bitters",
     "Orange Juice",
+    // garnish
     "Orange Peel",
+    // garnish
     "Orange Spiral",
+    // garnish
     "Orange",
     "Oreo Cookie",
     "Orgeat Syrup",
@@ -398,5 +301,62 @@ export const Ingredients = {
     "Worcestershire Sauce",
     "Wormwood",
     "Yoghurt",
+  ],
+  other: [
+    "Allspice",
+    "Almond Flavoring",
+    // Almond used only for homemade liqueurs
+    "Almond",
+    // Angelica root only used for homemade liqueurs
+    "Angelica Root",
+    "Angostura Bitters",
+    "Anis",
+    "Apple",
+    "Apricot",
+    "Asafoetida",
+    "Banana",
+    "Basil",
+    "Berries",
+    "Bitter Lemon",
+    "Bitters",
+    "Black pepper",
+    "Blackberries",
+    "Blackcurrant Squash",
+    "Blood Orange",
+    "Blueberries",
+    "Brown sugar",
+    "Butter",
+    "Candy",
+    "Cantaloupe",
+    "Caramel Coloring",
+    "Caramel Sauce",
+    "Cardamom",
+    "Carrot",
+    "Cayenne Pepper",
+    "Celery Salt",
+    "Cherries",
+    "Cherry",
+    "Chocolate Sauce",
+    "Chocolate Ice-Cream",
+    "Chocolate syrup",
+    "Chocolate",
+    "Cinnamon",
+    "Cloves",
+    "Cocoa Powder",
+    "Coconut Syrup",
+    "Coriander",
+    "Corn Syrup",
+    "Cornstarch",
+    "Cranberries",
+    "Cucumber",
+    "Cumin Seed",
+    "Demerara Sugar",
+    "Egg White",
+    "Egg Yolk",
+    "Egg",
+    "Fennel seeds",
+    "Figs",
+    "Food Coloring",
+    "Fruit",
   ]
 };
