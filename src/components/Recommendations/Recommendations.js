@@ -19,7 +19,7 @@ export const Recommendations = ({ ingredients }) => {
     }
 
     fetchRecommendations();
-  }, []);
+  }, [filterCocktails, ingredients, names]);
 
   async function getCocktails(names) {
     const cocktails = [];
