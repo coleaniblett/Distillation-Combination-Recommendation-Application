@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
 import './Form.css';
+import React, { useState } from 'react';
 import { Ingredients } from '../Ingredients/Ingredients';
 import { Dropdown } from '../Dropdown/Dropdown'
 
-const {liquors, beers, wines, liqueurs, mixers} = Ingredients;
+const {liquors, beers, wines, liqueurs, mixers, other} = Ingredients;
 
 export const Form = ({ onAdd, onSubmit }) => {
   const [formData, setFormData] = useState({});
@@ -40,6 +40,8 @@ export const Form = ({ onAdd, onSubmit }) => {
       setSelection(wines);
     } else if (id === "Mixers") {
       setSelection(mixers);
+    } else if (id === "Other") {
+      setSelection(other);
     }
   }
 
@@ -53,11 +55,12 @@ export const Form = ({ onAdd, onSubmit }) => {
         <div className="button-grouping">
           <button type="button" className="selection-button" onClick={handleSelection} id="Liquors">Liquors</button>
           <button type="button" className="selection-button" onClick={handleSelection} id="Beers">Beers</button>
+          <button type="button" className="selection-button" onClick={handleSelection} id="Wines">Wines</button>
         </div>
         <div className="button-grouping">
-          <button type="button" className="selection-button" onClick={handleSelection} id="Wines">Wines</button>
           <button type="button" className="selection-button" onClick={handleSelection} id="Liqueurs">Liqueurs</button>
           <button type="button" className="selection-button" onClick={handleSelection} id="Mixers">Mixers</button>
+          <button type="button" className="selection-button" onClick={handleSelection} id="Other">Other</button>
         </div>
       </div>
       <Dropdown choices={selection} choicesName={selectionName} selectIngredient={handleChange}/>
