@@ -46,7 +46,7 @@ export const Recommendations = ({ ingredients }) => {
       const cocktailIngredients = await getCocktailIngredients(cocktail);
       for (let cocktailIngredient of cocktailIngredients) {
         if (ingredientGeneralizer[cocktailIngredient]) {
-          console.log("Generalizing ingredient");
+          console.log(`Generalizing ingredient ${cocktailIngredient}`);
           cocktailIngredient = IngredientGeneralizer[cocktailIngredient];
         }
         if (!names.includes(cocktailIngredient) && !ingredientsToIgnore.includes(cocktailIngredient)) {
