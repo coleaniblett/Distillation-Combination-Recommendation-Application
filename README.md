@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# The Distillation-Combination-Recommendation-Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Distillation-Combination-Recommendation-Application (or DCRA for short) is a React-based cocktail recommendation app utilizing [TheCocktailDB](https://thecocktaildb.com/) API. A live-version of the site can be found [here](https://coleaniblett.github.io/Distillation-Combination-Recommendation-Application/).
 
-## Available Scripts
+With DCRA, users input a list of on-hand ingredients they have available. After receiving the user's inventory, DCRA checks those ingredients against a database of cocktails through its API calls, returning a list of cocktails that can be crafted using the ingredients on-hand.
 
-In the project directory, you can run:
+## Development Background
 
-### `npm start`
+I was motivated to develop DCRA as a project in order to help practice and familiarize myself with the React.js library as well as HTTP requests. While I had already developed a simple resume site using React previously, this was my first app making use of React hooks and involved more significant interaction between components. It was also my first project utilizing HTTP requests, and my first project utilizing asynchronous programming generally.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+One question I faced early on was what ingredients to present to the user. To come up with my initial list, I made a request to the API with an empty string, returning a massive set of JSON data. I then wrote a simple C++ program to process that data and write a new file presenting the various unique ingredients contained in the JSON file. That list numbered just under 400 ingredients, with a handful of duplicates owing mostly to differences in capitalization that my C++ program had not taken into account.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In culling the ingredients list, I sought to remove ingredients tied to specific companies that could be represented with generic ingredients. One major producer of vodka, for example, featured prominently in the ingredient list. In addition, several ingredients were represented multiple times under different names, such as "fresh lemon juice" and "lemon juice," a distinction I decided was not conducive to a smooth user experience. To simplify the UI while maintaining the full capabilities of the database, a "generalizer" dictionary was implemented.
 
-### `npm test`
+In the course of evaluating different cocktail recipes available from the database, I determined some changes that could be made to improve the available data. I found the maintainers of TheCocktailDB to be friendly and responsive in implementing these suggestions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Planned Updates
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Recommendations for one-ingredient-away cocktails and good-without-garnish cocktails
+* onClick functionality to view cocktail information
+* UI improvements
