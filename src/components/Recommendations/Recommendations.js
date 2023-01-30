@@ -29,10 +29,12 @@ export const Recommendations = ({ ingredients }) => {
           i: name
         }
       });
-      const drinks = response.data.drinks.map(drink => drink.strDrink);
-      for (const drink of drinks) {
-        if (!cocktails.includes(drink)) {
-          cocktails.push(drink);
+      if (response.data.drinks != "None Found") {
+        const drinks = response.data.drinks.map(drink => drink.strDrink);
+        for (const drink of drinks) {
+          if (!cocktails.includes(drink)) {
+            cocktails.push(drink);
+          }
         }
       }
     }
