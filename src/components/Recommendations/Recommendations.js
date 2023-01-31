@@ -12,6 +12,8 @@ export const Recommendations = ({ ingredients }) => {
   const ingredientsToIgnore = ["water", "lemon", "lemon peel", "lime", "lime peel"];
 
   useEffect(() => {
+    console.log("useEffect is called");
+
     async function fetchRecommendations() {
       const recommendations = await filterCocktails(names, ingredients);
       setCocktails(recommendations);
@@ -19,7 +21,7 @@ export const Recommendations = ({ ingredients }) => {
     }
 
     fetchRecommendations();
-  }, [filterCocktails, ingredients, names]);
+  }, []);
 
   async function getCocktails(names) {
     const cocktails = [];
@@ -29,6 +31,7 @@ export const Recommendations = ({ ingredients }) => {
           i: name
         }
       });
+      console.log(response.data.drinks);
       if (response.data.drinks != "None Found") {
         const drinks = response.data.drinks.map(drink => drink.strDrink);
         for (const drink of drinks) {
