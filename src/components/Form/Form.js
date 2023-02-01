@@ -28,7 +28,7 @@ export const Form = ({ onAdd, onSubmit }) => {
   }
 
    function handleSelection(event) {
-    const {id} = event.target;
+    const id = event.target.value;
     setSelectionName(id);
     if (id === "Liquors") {
       setSelection(liquors);
@@ -53,21 +53,16 @@ export const Form = ({ onAdd, onSubmit }) => {
 
   return (
     <form id="cocktail-form">
-      <div className="button-container">
-        <div className="button-grouping">
-          <button type="button" className="selection-button" onClick={handleSelection} id="Liquors">Liquors</button>
-          <button type="button" className="selection-button" onClick={handleSelection} id="Beers">Beers</button>
-        </div>
-        <div className="button-grouping">
-          <button type="button" className="selection-button" onClick={handleSelection} id="Wines">Wines</button>
-          <button type="button" className="selection-button" onClick={handleSelection} id="Liqueurs">Liqueurs</button>
-          <button type="button" className="selection-button" onClick={handleSelection} id="Mixers">Mixers</button>
-        </div>
-        <div className="button-grouping">
-          <button type="button" className="selection-button" onClick={handleSelection} id="Garnishes">Garnishes</button>
-          <button type="button" className="selection-button" onClick={handleSelection} id="Other">Other</button>
-        </div>
-      </div>
+      <label htmlFor="categories">Ingredient Categories:</label>
+      <select id="categories" onChange={handleSelection}>
+        <option value="Liquors">Liquors</option>
+        <option value="Liqueurs">Liqueurs</option>
+        <option value="Beers">Beers</option>
+        <option value="Wines">Wines</option>
+        <option value="Mixers">Mixers</option>
+        <option value="Garnishes">Garnishes</option>
+        <option value="Other">Other</option>
+      </select>
       <Dropdown choices={selection} choicesName={selectionName} selectIngredient={handleChange}/>
       <button type="submit" className="submission-button" onClick={handleSubmit}>Add ingredients to inventory</button><br/>
       <br/>
