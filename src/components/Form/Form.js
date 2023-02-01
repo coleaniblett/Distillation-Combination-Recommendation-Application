@@ -11,12 +11,12 @@ export const Form = ({ onAdd, onSubmit }) => {
   const [selection, setSelection] = useState(liquors);
 
   function handleSubmit(event) {
+    console.log("calling handleSubmit");
     event.preventDefault();
     if (formData.name === undefined || formData.name === "") {
       window.alert("No option selected");
     }
     else {
-      document.getElementById("cocktail-form").reset();
       onAdd({ ...formData, id: Date.now() });
       formData.name = "";
     }
