@@ -1,7 +1,4 @@
 @media only screen and (max-width: 500px) {
-  #cocktail-form {
-    width: 450px;
-  }
   #submit-inventory {
     position: relative;
     bottom: 10px;
@@ -18,27 +15,25 @@
 }
 
 @media only screen and (max-width: 460px) {
-  #cocktail-form {
-    width: 400px;
-  }
   #Liqueurs {
     padding-left: 7px;
   }
 }
 
-body {
-    background-color: #722f37;
-  }
+#cocktail-form {
+  background-color: rgba(63, 1, 35, 0.7);
+  width: 80%;
+  max-width: 700px;
+}
 
 form {
-    width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    box-sizing: border-box;
-  }
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+}
   
 select {
-  width: 100%;
+  width: 80%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;

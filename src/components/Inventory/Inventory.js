@@ -3,7 +3,7 @@ import './Inventory.css';
 
 export const Inventory = ({ ingredients, onRemoveIngredient }) => {
   return (
-    <div>
+    <div id="Inventory">
       <h2>Inventory</h2>
       <ul>
         <li>
