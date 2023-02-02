@@ -1,4 +1,10 @@
 .App {
+  height: 100%;
   text-align: center;
   margin: auto;
+  padding: 5% 0 10% 0;
+  background-image: url('../../../public/igor-stepanov-rNKKUsIJNd4-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
