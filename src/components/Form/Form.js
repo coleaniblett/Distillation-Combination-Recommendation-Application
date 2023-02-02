@@ -53,7 +53,7 @@ export const Form = ({ onAdd, onSubmit }) => {
 
   return (
     <form id="cocktail-form">
-      <label htmlFor="categories">Ingredient Categories:</label>
+      <label htmlFor="categories">Ingredient Categories:</label><br/>
       <select id="categories" onChange={handleSelection}>
         <option value="Liquors">Liquors</option>
         <option value="Liqueurs">Liqueurs</option>
