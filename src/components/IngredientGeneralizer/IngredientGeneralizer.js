@@ -21,6 +21,8 @@ export const IngredientGeneralizer = {
   "jack daniels": "whiskey",
   // ?
   "jim bean": "whiskey",
+  // fix for Alexander
+  "light cream": "cream",
   // ?
   "sweet and sour": "sweet and sour mix",
   // fix for Jack's Vanilla Coke
