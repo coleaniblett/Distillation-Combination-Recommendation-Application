@@ -239,8 +239,6 @@ export const Ingredients = {
     "Angostura Bitters",
     "Anis",
     "Apple",
-    "Apricot",
-    "Asafoetida",
     "Banana",
     "Basil",
     "Berries",
