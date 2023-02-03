@@ -1,7 +1,7 @@
 import './Recommendations.css';
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { IngredientGeneralizer } from '../IngredientGeneralizer/IngredientGeneralizer';
+import { TheCocktailDB } from '../../util/TheCocktailDB';
 
 export const Recommendations = ({ ingredients }) => {
   const [cocktails, setCocktails] = useState([]);
@@ -12,8 +12,6 @@ export const Recommendations = ({ ingredients }) => {
   const ingredientsToIgnore = ["water", "lemon", "lemon peel", "lime", "lime peel"];
 
   useEffect(() => {
-    console.log("useEffect is called");
-
     async function fetchRecommendations() {
       const recommendations = await filterCocktails(names, ingredients);
       setCocktails(recommendations);
@@ -26,12 +24,7 @@ export const Recommendations = ({ ingredients }) => {
   async function getCocktails(names) {
     const cocktails = [];
     for (const name of names) {
-      const response = await axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php', {
-        params: {
-          i: name
-        }
-      });
-      console.log(response.data.drinks);
+      const response = await TheCocktailDB.getCocktails(name);
       if (response.data.drinks != "None Found") {
         const drinks = response.data.drinks.map(drink => drink.strDrink);
         for (const drink of drinks) {
@@ -65,11 +58,7 @@ export const Recommendations = ({ ingredients }) => {
 
   async function getCocktailIngredients(cocktail) {
     const cocktailIngredients = [];
-    const response = await axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/search.php', {
-      params: {
-        s: cocktail
-      }
-    })
+    const response = await TheCocktailDB.getCocktailIngredients(cocktail);
     let i = 1;
     while (response.data.drinks[0][`strIngredient${i}`]) {
       const newIngredient = response.data.drinks[0][`strIngredient${i}`].toLowerCase();
