@@ -1,5 +1,5 @@
 import React from 'react';
-import { Recommendations } from '../Recommendations/Recommendations';
+import { GetRecommendations } from '../GetRecommendations/GetRecommendations';
 import './RecommendationsList.css';
 
 export const RecommendationsList = ({ submitted, ingredients }) => {
@@ -8,7 +8,7 @@ export const RecommendationsList = ({ submitted, ingredients }) => {
       <div className="recommendations">
         <div className="ready-to-make">
           <h2>Recommendations</h2>
-          {<Recommendations ingredients={ingredients} />}
+          {<GetRecommendations ingredients={ingredients} />}
         </div>
       </div>
     );

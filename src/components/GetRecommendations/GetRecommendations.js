@@ -1,9 +1,9 @@
-import './Recommendations.css';
+import './GetRecommendations.css';
 import React, { useState, useEffect } from 'react';
 import { IngredientGeneralizer } from '../IngredientGeneralizer/IngredientGeneralizer';
 import { TheCocktailDB } from '../../util/TheCocktailDB';
 
-export const Recommendations = ({ ingredients }) => {
+export const GetRecommendations = ({ ingredients }) => {
   const [cocktails, setCocktails] = useState([]);
   const [loading, setLoading] = useState(true);
   const names = ingredients.map(ingredient => ingredient.name.toLowerCase());
