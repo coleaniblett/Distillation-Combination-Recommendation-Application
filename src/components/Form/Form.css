@@ -47,7 +47,9 @@ select {
 }
 
 label {
-  color: #b3a695;;
+  color: #b3a695;
+  display: inline-block;
+  margin-bottom: 8px;
 }
   
 button {
@@ -63,10 +65,6 @@ button {
   font-size: 16px;
   cursor: pointer;
   font-style: italic;
-}
-
-.selection-button {
-  width: 20%;
 }
   
 form button:hover {
