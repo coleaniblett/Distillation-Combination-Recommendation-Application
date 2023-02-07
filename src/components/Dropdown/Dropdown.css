@@ -3,3 +3,9 @@
   margin: auto;
   box-sizing: border-box;
 }
+
+label {
+  color: #b3a695;
+  display: inline-block;
+  margin-bottom: 8px;
+}
