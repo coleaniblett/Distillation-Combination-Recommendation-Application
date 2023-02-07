@@ -1,0 +1,11 @@
+li {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  min-height: 32px;
+  position: relative;
+}
+
+.recommendation {
+  position: relative;
+  right: 16px;
+}
