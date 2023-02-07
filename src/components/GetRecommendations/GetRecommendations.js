@@ -2,6 +2,7 @@ import './GetRecommendations.css';
 import React, { useState, useEffect } from 'react';
 import { IngredientGeneralizer } from '../IngredientGeneralizer/IngredientGeneralizer';
 import { TheCocktailDB } from '../../util/TheCocktailDB';
+import { Recommendation } from '../Recommendation/Recommendation';
 
 export const GetRecommendations = ({ ingredients }) => {
   const [cocktails, setCocktails] = useState([]);
@@ -76,7 +77,7 @@ export const GetRecommendations = ({ ingredients }) => {
     return (
       <ul>
         {cocktails.map(cocktail => (
-          <li key={cocktail}>{cocktail}</li>
+          <Recommendation key={cocktail} name={cocktail} />
         ))}
       </ul>
     );
