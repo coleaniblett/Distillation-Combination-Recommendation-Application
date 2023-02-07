@@ -11,7 +11,6 @@ export const Form = ({ onAdd, onSubmit }) => {
   const [selection, setSelection] = useState(liquors);
 
   function handleSubmit(event) {
-    console.log("calling handleSubmit");
     event.preventDefault();
     if (formData.name === undefined || formData.name === "") {
       window.alert("No option selected");
@@ -52,21 +51,23 @@ export const Form = ({ onAdd, onSubmit }) => {
   }
 
   return (
-    <form id="cocktail-form">
-      <label htmlFor="categories">Ingredient Categories:</label><br/>
-      <select id="categories" onChange={handleSelection}>
-        <option value="Liquors">Liquors</option>
-        <option value="Liqueurs">Liqueurs</option>
-        <option value="Beers">Beers</option>
-        <option value="Wines">Wines</option>
-        <option value="Mixers">Mixers</option>
-        <option value="Garnishes">Garnishes</option>
-        <option value="Other">Other</option>
-      </select>
-      <Dropdown choices={selection} choicesName={selectionName} selectIngredient={handleChange}/>
-      <button type="submit" className="submission-button" onClick={handleSubmit}>Add ingredients to inventory</button><br/>
-      <br/>
-      <button type="button" className="submission-button" id="submit-inventory" onClick={handleInventorySubmit}>Submit inventory</button>
-    </form>
+    <div className="Form">
+      <form id="cocktail-form">
+        <label htmlFor="categories">Ingredient Categories:</label><br/>
+        <select id="categories" onChange={handleSelection}>
+          <option value="Liquors">Liquors</option>
+          <option value="Liqueurs">Liqueurs</option>
+          <option value="Beers">Beers</option>
+          <option value="Wines">Wines</option>
+          <option value="Mixers">Mixers</option>
+          <option value="Garnishes">Garnishes</option>
+          <option value="Other">Other</option>
+        </select>
+        <Dropdown choices={selection} choicesName={selectionName} selectIngredient={handleChange}/>
+        <button type="submit" className="submission-button" onClick={handleSubmit}>Add ingredients to inventory</button><br/>
+        <br/>
+        <button type="button" className="submission-button" id="submit-inventory" onClick={handleInventorySubmit}>Submit inventory</button>
+      </form>
+    </div>
   );
 }
