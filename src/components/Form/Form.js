@@ -4,6 +4,15 @@ import { Ingredients } from '../Ingredients/Ingredients';
 import { Dropdown } from '../Dropdown/Dropdown'
 
 const {liquors, beers, wines, liqueurs, mixers, garnishes, other} = Ingredients;
+const categories = [
+  "Liquors",
+  "Beers",
+  "Wines",
+  "Liqueurs",
+  "Mixers",
+  "Garnishes",
+  "Other"
+];
 
 export const Form = ({ onAdd, onSubmit }) => {
   const [formData, setFormData] = useState({});
@@ -53,7 +62,7 @@ export const Form = ({ onAdd, onSubmit }) => {
   return (
     <div className="Form">
       <form id="cocktail-form">
-        <label htmlFor="categories">Ingredient Categories:</label><br/>
+        {/*<label htmlFor="categories">Ingredient Categories:</label><br/>
         <select id="categories" onChange={handleSelection}>
           <option value="Liquors">Liquors</option>
           <option value="Liqueurs">Liqueurs</option>
@@ -62,7 +71,8 @@ export const Form = ({ onAdd, onSubmit }) => {
           <option value="Mixers">Mixers</option>
           <option value="Garnishes">Garnishes</option>
           <option value="Other">Other</option>
-        </select>
+        </select>*/}
+        <Dropdown choices={categories} choicesName="Ingredient Categories" selectIngredient={handleSelection}/>
         <Dropdown choices={selection} choicesName={selectionName} selectIngredient={handleChange}/>
         <button type="submit" className="submission-button" onClick={handleSubmit}>Add ingredients to inventory</button><br/>
         <br/>
