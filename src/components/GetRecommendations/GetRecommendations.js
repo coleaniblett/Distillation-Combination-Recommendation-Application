@@ -14,7 +14,8 @@ export const GetRecommendations = ({ ingredients }) => {
 
   useEffect(() => {
     async function fetchRecommendations() {
-      const recommendations = await filterCocktails(names, ingredients);
+      const cocktails = await getCocktails(names);
+      const recommendations = await filterCocktails(cocktails);
       setCocktails(recommendations);
       setLoading(false);
     }
@@ -23,14 +24,13 @@ export const GetRecommendations = ({ ingredients }) => {
   }, []);
 
   async function getCocktails(names) {
-    const cocktails = [];
+    const cocktails = {};
     for (const name of names) {
       const response = await TheCocktailDB.getCocktails(name);
-      if (response.data.drinks != "None Found") {
-        const drinks = response.data.drinks.map(drink => drink.strDrink);
-        for (const drink of drinks) {
-          if (!cocktails.includes(drink)) {
-            cocktails.push(drink);
+      if (response.data.drinks !== "None Found") {
+        for (const drink of response.data.drinks) {
+          if (!cocktails[drink.strDrink]) {
+            cocktails[drink.strDrink] = drink;
           }
         }
       }
@@ -38,10 +38,8 @@ export const GetRecommendations = ({ ingredients }) => {
     return cocktails;
   }
 
-  async function filterCocktails() {
-    const cocktails = await getCocktails(names);
-    const cocktailsToRemove = [];
-    for (const cocktail of cocktails) {
+  async function filterCocktails(cocktails) {
+    for (const cocktail of Object.keys(cocktails)) {
       const cocktailIngredients = await getCocktailIngredients(cocktail);
       for (let cocktailIngredient of cocktailIngredients) {
         if (ingredientGeneralizer[cocktailIngredient]) {
@@ -49,12 +47,11 @@ export const GetRecommendations = ({ ingredients }) => {
           cocktailIngredient = IngredientGeneralizer[cocktailIngredient];
         }
         if (!names.includes(cocktailIngredient) && !ingredientsToIgnore.includes(cocktailIngredient)) {
-          cocktailsToRemove.push(cocktail);
+          delete cocktails[cocktail];
         }
       }
     }
-    const filteredCocktails = cocktails.filter(cocktail => !cocktailsToRemove.includes(cocktail));
-    return filteredCocktails;
+    return cocktails;
   }
 
   async function getCocktailIngredients(cocktail) {
@@ -76,9 +73,10 @@ export const GetRecommendations = ({ ingredients }) => {
   } else {
     return (
       <ul>
-        {cocktails.map(cocktail => (
-          <Recommendation key={cocktail} name={cocktail} />
-        ))}
+        {Object.keys(cocktails).map(cocktail => (
+          <Recommendation key={cocktail} name={cocktail} cocktail={cocktails[cocktail]} />
+        ))
+        }
       </ul>
     );
   }
