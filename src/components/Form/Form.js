@@ -62,16 +62,6 @@ export const Form = ({ onAdd, onSubmit }) => {
   return (
     <div className="Form">
       <form id="cocktail-form">
-        {/*<label htmlFor="categories">Ingredient Categories:</label><br/>
-        <select id="categories" onChange={handleSelection}>
-          <option value="Liquors">Liquors</option>
-          <option value="Liqueurs">Liqueurs</option>
-          <option value="Beers">Beers</option>
-          <option value="Wines">Wines</option>
-          <option value="Mixers">Mixers</option>
-          <option value="Garnishes">Garnishes</option>
-          <option value="Other">Other</option>
-        </select>*/}
         <Dropdown choices={categories} choicesName="Ingredient Categories" selectIngredient={handleSelection}/>
         <Dropdown choices={selection} choicesName={selectionName} selectIngredient={handleChange}/>
         <button type="submit" className="submission-button" onClick={handleSubmit}>Add ingredients to inventory</button><br/>
