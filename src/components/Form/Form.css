@@ -30,6 +30,8 @@ form {
   margin: 0 auto;
   text-align: center;
   box-sizing: border-box;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
   
 select {
