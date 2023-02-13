@@ -30,7 +30,7 @@ export const GetRecommendations = ({ ingredients }) => {
       if (response.data.drinks !== "None Found") {
         for (const drink of response.data.drinks) {
           if (!cocktails[drink.strDrink]) {
-            cocktails[drink.strDrink] = drink;
+            cocktails[drink.strDrink] = await TheCocktailDB.getCocktail(drink.strDrink);
           }
         }
       }

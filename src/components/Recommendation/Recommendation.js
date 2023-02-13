@@ -1,7 +1,22 @@
 import './Recommendation.css';
+import React, { useState, useEffect } from 'react';
+import { DrinkInfo } from '../DrinkInfo/DrinkInfo';
 
-export const Recommendation = ({name}) => {
+export const Recommendation = ({ name, cocktail }) => {
+  const [showInfo, setShowInfo] = useState(false);
+
+  const handleClick = () => {
+    if (showInfo) {
+      setShowInfo(false);
+    } else {
+      setShowInfo(true);
+    }
+  }
+
   return (
-    <li className="recommendation" key={name}>{name}</li>
+    <div className="recommendation">
+      <li className="recommendation-title" key={name} onClick={handleClick}>{name}</li>
+      {showInfo && <DrinkInfo drinkData={cocktail["data"]["drinks"][0]} />}
+    </div>
   );
 }
