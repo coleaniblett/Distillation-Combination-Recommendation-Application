@@ -20,13 +20,13 @@ export const Form = ({ onAdd, onSubmit }) => {
   const [categoryName, setCategoryName] = useState("Liquors");
   const [category, setCategory] = useState(liquors);
 
-  function handleCategoryChange(event) {
+  const handleCategoryChange = (event) => {
     const id = event.target.value;
     setCategoryName(id);
     setCategory(categories[`${id}`]);
   }
 
-  function handleIngredientChange(event) {
+  const handleIngredientChange = (event) => {
     const {value} = event.target;
     setFormData(prevFormData => ({ ...prevFormData, "name": value}));
   }
