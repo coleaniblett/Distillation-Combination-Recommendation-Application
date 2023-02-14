@@ -5,7 +5,7 @@ import './RecommendationsList.css';
 export const RecommendationsList = ({ submitted, ingredients }) => {
   if (submitted) {
     return (
-      <div className="recommendations">
+      <div className="text-box">
         <div className="ready-to-make">
           <h2>Recommendations</h2>
           {<GetRecommendations ingredients={ingredients} />}
