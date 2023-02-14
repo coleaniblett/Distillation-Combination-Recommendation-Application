@@ -13,5 +13,12 @@
   background-color: rgba(63, 1, 35, 0.7);
   width: 80%;
   max-width: 700px;
-  margin: auto;
+  margin: 16px auto;
+  padding: 8px 0;
+}
+
+.section-heading {
+  color: #b3a695;
+  font-family: 'GB Gormand';
+  text-decoration: underline;
 }

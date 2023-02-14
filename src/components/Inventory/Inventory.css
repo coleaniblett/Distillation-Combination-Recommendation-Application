@@ -27,13 +27,9 @@ ul {
   margin-top: 0;
 }
 
-h2, li {
+li {
   color: #b3a695;
   font-family: 'GB Gormand';
-}
-
-h2 {
-  text-decoration: underline;
 }
 
 li button{

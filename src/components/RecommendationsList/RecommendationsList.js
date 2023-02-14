@@ -7,7 +7,7 @@ export const RecommendationsList = ({ submitted, ingredients }) => {
     return (
       <div className="text-box">
         <div className="ready-to-make">
-          <h2>Recommendations</h2>
+          <h2 className="section-heading">Recommendations</h2>
           {<GetRecommendations ingredients={ingredients} />}
         </div>
       </div>

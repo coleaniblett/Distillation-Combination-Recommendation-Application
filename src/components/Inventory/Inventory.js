@@ -4,7 +4,7 @@ import './Inventory.css';
 export const Inventory = ({ ingredients, onRemoveIngredient }) => {
   return (
     <div id="Inventory" className="text-box">
-      <h2>Inventory</h2>
+      <h2 className="section-heading">Inventory</h2>
       <ul>
         <li>
           Water
