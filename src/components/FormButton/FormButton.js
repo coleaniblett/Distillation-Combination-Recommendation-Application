@@ -1,5 +1,5 @@
 import './FormButton.css';
-import React, { useState } from 'react';
+import React from 'react';
 
 export const FormButton = ({ onClick, text }) => {
   return (

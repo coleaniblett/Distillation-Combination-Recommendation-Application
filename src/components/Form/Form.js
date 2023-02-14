@@ -1,4 +1,3 @@
-import './Form.css';
 import React, { useState } from 'react';
 import { Ingredients } from '../Ingredients/Ingredients';
 import { Dropdown } from '../Dropdown/Dropdown';
@@ -48,7 +47,7 @@ export const Form = ({ onAdd, onSubmit }) => {
 
   return (
     <div className="form">
-      <form id="cocktail-form" className="text-box">
+      <form className="text-box">
         <Dropdown choices={Object.keys(categories)} choicesName="Ingredient Categories" selectIngredient={handleCategoryChange}/>
         <Dropdown choices={category} choicesName={categoryName} selectIngredient={handleIngredientChange}/>
         <FormButton onClick={handleIngredientSubmit} text="Add ingredients to inventory" />
