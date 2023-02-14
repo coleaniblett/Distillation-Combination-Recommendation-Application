@@ -67,7 +67,7 @@ export const GetRecommendations = ({ ingredients }) => {
   }
 
   if (loading) {
-    return <div id="loading-message">Loading recommendations...</div>;
+    return <div className="loading-message">Loading recommendations...</div>;
   } else if (Object.keys(cocktails).length === 0) {
     return <div className="no-recs-message">No recommendations found</div>;
   } else {
