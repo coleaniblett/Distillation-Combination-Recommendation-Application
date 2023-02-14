@@ -41,3 +41,15 @@ li button{
 li {
   list-style-type: none;
 }
+
+.remove-button {
+  background-color: transparent;
+  color: #b3a695;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.inventory-list {
+  padding-left: 0;
+}
