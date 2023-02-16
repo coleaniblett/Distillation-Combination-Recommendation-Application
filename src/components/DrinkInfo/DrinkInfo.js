@@ -10,7 +10,11 @@ export const DrinkInfo = ({ drinkData }) => {
     while (drinkData[`strIngredient${i}`]) {
       let measurement = drinkData[`strMeasure${i}`];
       let ingredient = drinkData[`strIngredient${i}`];
-      ingredients.push(`${measurement} ${ingredient}`);
+      if (measurement) {
+        ingredients.push(`${measurement} ${ingredient}`);
+      } else {
+        ingredients.push(`${ingredient}`);
+      }
       i++;
     }
     return ingredients;
