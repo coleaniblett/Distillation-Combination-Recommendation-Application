@@ -16,6 +16,9 @@ export const Recommendation = ({ name, cocktail }) => {
   return (
     <div className="recommendation">
       <li className="recommendation-title standard-text" key={name} onClick={handleClick}>{name}</li>
+      <button className="display-info-button" onClick={handleClick}>
+        {showInfo ? "-" : "+"}
+      </button>
       {showInfo && <DrinkInfo drinkData={cocktail["data"]["drinks"][0]} />}
     </div>
   );

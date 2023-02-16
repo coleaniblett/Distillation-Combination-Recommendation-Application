@@ -1,11 +1,18 @@
-li {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  min-height: 32px;
-  position: relative;
-}
-
 .recommendation {
   position: relative;
   right: 16px;
+}
+
+.recommendation-title {
+  display: inline-block;
+  padding-left: 50px;
+}
+
+.display-info-button {
+  border: 2px solid #b3a695;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #b3a695;
+  margin-left: 32px;
+  float: right;
 }
