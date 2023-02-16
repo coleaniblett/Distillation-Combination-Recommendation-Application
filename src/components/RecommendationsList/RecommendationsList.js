@@ -5,7 +5,7 @@ import { GetRecommendations } from '../GetRecommendations/GetRecommendations';
 export const RecommendationsList = ({ submitted, ingredients }) => {
   if (submitted) {
     return (
-      <div className="recommendations">
+      <div className="recommendations flex-box">
         <div className="text-box">
           <div className="ready-to-make recommendations-list">
             <h2 className="section-heading">Recommendations</h2>

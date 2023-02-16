@@ -46,7 +46,7 @@ export const Form = ({ onAdd, onSubmit }) => {
   }
 
   return (
-    <div className="form">
+    <div className="form flex-box">
       <form className="text-box">
         <Dropdown choices={Object.keys(categories)} choicesName="Ingredient Categories" selectIngredient={handleCategoryChange}/>
         <Dropdown choices={category} choicesName={categoryName} selectIngredient={handleIngredientChange}/>

@@ -2,7 +2,7 @@
   height: 100%;
   text-align: center;
   margin: auto;
-  padding: 5% 0 10% 0;
+  padding: 5% 10% 10% 10%;
   background-image: url('../../../public/igor-stepanov-rNKKUsIJNd4-unsplash.jpg');
   background-size: cover;
   background-position: center;
@@ -11,10 +11,11 @@
 
 .text-box {
   background-color: rgba(63, 1, 35, 0.7);
-  width: 80%;
+  width: 100%;
   max-width: 700px;
   margin: 16px auto;
   padding: 8px 0;
+  height: 500px;
 }
 
 .section-heading {
@@ -26,4 +27,33 @@
 .standard-text {
   color: #b3a695;
   font-family: 'GB Gormand';
+}
+
+li {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  min-height: 32px;
+  position: relative;
+}
+
+.App-main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+}
+
+@media only screen and (max-width: 1020px) {
+  .App-main {
+    align-items: center;
+    flex-direction: column;
+  }
+  .flex-box {
+    width: 100%;
+  }
 }
