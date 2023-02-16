@@ -15,7 +15,7 @@ export const Recommendation = ({ name, cocktail }) => {
 
   return (
     <div className="recommendation">
-      <li className="recommendation-title" key={name} onClick={handleClick}>{name}</li>
+      <li className="recommendation-title standard-text" key={name} onClick={handleClick}>{name}</li>
       {showInfo && <DrinkInfo drinkData={cocktail["data"]["drinks"][0]} />}
     </div>
   );

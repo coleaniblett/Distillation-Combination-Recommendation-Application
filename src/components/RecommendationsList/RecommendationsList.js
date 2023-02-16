@@ -1,6 +1,5 @@
 import React from 'react';
 import { GetRecommendations } from '../GetRecommendations/GetRecommendations';
-import './RecommendationsList.css';
 
 export const RecommendationsList = ({ submitted, ingredients }) => {
   if (submitted) {

@@ -1,3 +1,8 @@
 .drink-info {
   color: #b3a695;
+  font-style: italic;
+}
+
+.ingredient-info {
+  padding-left: 0;
 }
