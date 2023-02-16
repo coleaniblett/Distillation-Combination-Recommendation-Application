@@ -1,20 +1,18 @@
 import './App.css';
 import React from 'react';
+import { UseIngredients } from '../UseIngredients/UseIngredients';
 import { Header } from '../Header/Header';
 import { Form } from '../Form/Form';
 import { Inventory } from '../Inventory/Inventory';
-import { UseIngredients } from '../UseIngredients/UseIngredients';
 import { RecommendationsList } from '../RecommendationsList/RecommendationsList';
 
 /*
     TO-DO
-  1. Review ingredients, write generalizer function
-  2. Split mixers into mixers and garnishes
-  3. Develop two additional recommendation lists (one-ingredient-away and fine-without-garnish)
-  4. Add clickable functionality to cocktail recommendations
-  5. "No recommendations found" output
-  6. Add user instructions
-  7. Look up to-do compiler
+  1. Review ingredients
+  2. Develop two additional recommendation lists (one-ingredient-away and fine-without-garnish)
+  3. Add user instructions
+  4. Allow multiple searches in one session
+  5. Flexbox the text-boxes
 */
 
 function App() {
@@ -23,9 +21,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Form onAdd={addIngredient} onSubmit={submitIngredients}/>
-      <Inventory ingredients={ingredients} onRemoveIngredient={removeIngredient} />
-      <RecommendationsList submitted={submitted} ingredients={ingredients} />
+      <div className="App-main">
+        <Form onAdd={addIngredient} onSubmit={submitIngredients}/>
+        <Inventory ingredients={ingredients} onRemoveIngredient={removeIngredient} />
+        <RecommendationsList submitted={submitted} ingredients={ingredients} />
+      </div>
     </div>
   );
 }
