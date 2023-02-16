@@ -48,6 +48,7 @@ export const Form = ({ onAdd, onSubmit }) => {
   return (
     <div className="form flex-box">
       <form className="text-box">
+        <h2 className="section-heading">Ingredient Search</h2>
         <Dropdown choices={Object.keys(categories)} choicesName="Ingredient Categories" selectIngredient={handleCategoryChange}/>
         <Dropdown choices={category} choicesName={categoryName} selectIngredient={handleIngredientChange}/>
         <FormButton onClick={handleIngredientSubmit} text="Add ingredients to inventory" />
