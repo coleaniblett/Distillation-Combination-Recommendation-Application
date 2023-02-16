@@ -1,4 +1,6 @@
-.recommendations-list {
-  max-width: 70%;
-  margin: auto;
+@media only screen and (max-width: 1150px) {
+  .recommendations-list {
+    max-width: 70%;
+    margin: auto;
+  }
 }
