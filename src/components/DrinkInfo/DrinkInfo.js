@@ -25,7 +25,7 @@ export const DrinkInfo = ({ drinkData }) => {
   return (
     <div className="drink-info">
       {ingredients.map(ingredient => (
-        <ul className="ingredient-info standard-text">{ingredient}</ul>
+        <ul key={ingredient} className="ingredient-info standard-text">{ingredient}</ul>
       ))}
       <p className="instructions standard-text">
         {instructions}
