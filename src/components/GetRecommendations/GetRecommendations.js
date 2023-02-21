@@ -6,14 +6,12 @@ import { Recommendation } from '../Recommendation/Recommendation';
 
 export const GetRecommendations = ({ ingredients, loading, setLoading }) => {
   const [cocktails, setCocktails] = useState([]);
-  //const [loading, setLoading] = useState(true);
   const names = ingredients.map(ingredient => ingredient.name.toLowerCase());
   const ingredientGeneralizer = IngredientGeneralizer;
   // water and various garnishes are to be ignored as ingredients
   const ingredientsToIgnore = ["water", "lemon", "lemon peel", "lime", "lime peel"];
 
   useEffect(() => {
-    console.log("useEffect is called");
     async function fetchRecommendations() {
       const cocktails = await getCocktails(names);
       const recommendations = await filterCocktails(cocktails);
