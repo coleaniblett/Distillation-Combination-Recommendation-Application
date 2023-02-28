@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { UseIngredients } from '../UseIngredients/UseIngredients';
 import { Header } from '../Header/Header';
 import { Form } from '../Form/Form';
@@ -14,15 +14,19 @@ import { RecommendationsList } from '../RecommendationsList/RecommendationsList'
 */
 
 function App() {
-  const { ingredients, submitted, loading, setLoading, addIngredient, removeIngredient, submitIngredients } = UseIngredients();
+  const [recommendations, setRecommendations] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const { ingredients, addIngredient, removeIngredient } = UseIngredients();
 
   return (
     <div className="App">
       <Header />
       <div className="App-main">
-        <Form onAdd={addIngredient} onSubmit={submitIngredients}/>
+        <Form onAdd={addIngredient} ingredients={ingredients} setRecommendations={setRecommendations} setLoading={setLoading} setSubmitted={setSubmitted}/>
         <Inventory ingredients={ingredients} onRemoveIngredient={removeIngredient} />
-        <RecommendationsList submitted={submitted} loading={loading} setLoading={setLoading} ingredients={ingredients} />
+        <RecommendationsList submitted={submitted} loading={loading} recommendations={recommendations} />
       </div>
     </div>
   );

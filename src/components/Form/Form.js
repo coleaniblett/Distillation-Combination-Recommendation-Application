@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { Ingredients } from '../Ingredients/Ingredients';
 import { Dropdown } from '../Dropdown/Dropdown';
 import { FormButton } from '../FormButton/FormButton';
+import { GetRecommendations } from '../GetRecommendations/GetRecommendations';
 
+const { getCocktails, filterCocktails } = GetRecommendations();
 const {liquors, beers, wines, liqueurs, mixers, garnishes, other} = Ingredients;
 const categories = {
   "Liquors": liquors,
@@ -14,7 +16,7 @@ const categories = {
   "Other": other
 }
 
-export const Form = ({ onAdd, onSubmit }) => {
+export const Form = ({ onAdd, ingredients, setRecommendations, setLoading, setSubmitted }) => {
   const [formData, setFormData] = useState({});
   const [categoryName, setCategoryName] = useState("Liquors");
   const [category, setCategory] = useState(liquors);
@@ -40,9 +42,17 @@ export const Form = ({ onAdd, onSubmit }) => {
     }
   }
 
-  const handleInventorySubmit = (event) => {
+  const handleInventorySubmit = async (event) => {
     event.preventDefault();
-    onSubmit();
+    setRecommendations({});
+    setLoading(true);
+    const names = ingredients.map(ingredient => ingredient.name.toLowerCase());
+    const unfilteredResult = await getCocktails(names);
+    const result = await filterCocktails(unfilteredResult, names);
+    console.log(result);
+    setLoading(false);
+    setRecommendations(result);
+    setSubmitted(true);
   }
 
   return (

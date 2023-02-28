@@ -1,28 +1,12 @@
-import './GetRecommendations.css';
-import React, { useState, useEffect } from 'react';
-import { IngredientGeneralizer } from '../IngredientGeneralizer/IngredientGeneralizer';
+import React from 'react';
 import { TheCocktailDB } from '../../util/TheCocktailDB';
-import { Recommendation } from '../Recommendation/Recommendation';
+import { IngredientGeneralizer } from '../IngredientGeneralizer/IngredientGeneralizer';
 
-export const GetRecommendations = ({ ingredients, loading, setLoading }) => {
-  const [cocktails, setCocktails] = useState([]);
-  const names = ingredients.map(ingredient => ingredient.name.toLowerCase());
+export const GetRecommendations = () => {
   const ingredientGeneralizer = IngredientGeneralizer;
-  // water and various garnishes are to be ignored as ingredients
   const ingredientsToIgnore = ["water", "lemon", "lemon peel", "lime", "lime peel"];
 
-  useEffect(() => {
-    async function fetchRecommendations() {
-      const cocktails = await getCocktails(names);
-      const recommendations = await filterCocktails(cocktails);
-      setCocktails(recommendations);
-      setLoading(false);
-    }
-
-    fetchRecommendations();
-  }, []);
-
-  async function getCocktails(names) {
+  const getCocktails = async (names) => {
     const cocktails = {};
     for (const name of names) {
       const response = await TheCocktailDB.getCocktails(name);
@@ -37,7 +21,7 @@ export const GetRecommendations = ({ ingredients, loading, setLoading }) => {
     return cocktails;
   }
 
-  async function filterCocktails(cocktails) {
+  const filterCocktails = async (cocktails, names) => {
     for (const cocktail of Object.keys(cocktails)) {
       const cocktailIngredients = await getCocktailIngredients(cocktail);
       for (let cocktailIngredient of cocktailIngredients) {
@@ -53,7 +37,7 @@ export const GetRecommendations = ({ ingredients, loading, setLoading }) => {
     return cocktails;
   }
 
-  async function getCocktailIngredients(cocktail) {
+  const getCocktailIngredients = async (cocktail) => {
     const cocktailIngredients = [];
     const response = await TheCocktailDB.getCocktailIngredients(cocktail);
     let i = 1;
@@ -65,18 +49,5 @@ export const GetRecommendations = ({ ingredients, loading, setLoading }) => {
     return cocktailIngredients;
   }
 
-  if (loading) {
-    return <div className="loading-message">Loading recommendations...</div>;
-  } else if (Object.keys(cocktails).length === 0) {
-    return <div className="no-recs-message">No recommendations found</div>;
-  } else {
-    return (
-      <ul>
-        {Object.keys(cocktails).map(cocktail => (
-          <Recommendation key={cocktail} name={cocktail} cocktail={cocktails[cocktail]} />
-        ))
-        }
-      </ul>
-    );
-  }
+  return { getCocktails, filterCocktails };
 }
