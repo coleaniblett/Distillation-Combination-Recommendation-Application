@@ -1,4 +1,3 @@
-import React from 'react';
 import { TheCocktailDB } from '../../util/TheCocktailDB';
 import { IngredientGeneralizer } from '../IngredientGeneralizer/IngredientGeneralizer';
 
