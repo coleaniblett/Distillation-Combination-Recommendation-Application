@@ -1,0 +1,19 @@
+.ingredient-locator {
+  border-color: #b3a695;
+  border-width: 2px;
+  border-style: solid;
+  background-color: rgba(63, 1, 35, 0.7);
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+#ingredient-locator-heading {
+  padding: 8px;
+  margin: 0;
+}
+
+.user-interface {
+  display: flex;
+  align-items: flex-end;
+}

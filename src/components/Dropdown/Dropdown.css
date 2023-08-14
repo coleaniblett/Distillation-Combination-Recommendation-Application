@@ -1,3 +1,7 @@
+.dropdown {
+  width: 50%;
+}
+
 label {
   color: #b3a695;
   display: inline-block;
@@ -5,9 +9,9 @@ label {
 }
 
 .dropdown-select {
-  width: 200px;
+  width: 80%;
   padding: 12px 20px;
-  margin: 0 0 16px;
+  margin: 0 0 8px;
   box-sizing: border-box;
   border: 2px solid #b3a695;
   border-radius: 4px;

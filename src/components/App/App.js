@@ -9,9 +9,7 @@ import { Main } from '../Main/Main';
   1. Review ingredients
   2. Develop two additional recommendation lists (one-ingredient-away and fine-without-garnish)
   3. Add user instructions
-  4. UI redesign
-  5. Store API key in an environmental variable
-  6. Add minimize button for ingreident locator
+  4. Add minimize button for ingreident locator
 */
 export const App = () => {
   const [recommendations, setRecommendations] = useState({});

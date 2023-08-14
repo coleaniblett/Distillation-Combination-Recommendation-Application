@@ -1,47 +1,12 @@
 import './Form.css';
-import React, { useState } from 'react';
-import { Ingredients } from '../Ingredients/Ingredients';
-import { Dropdown } from '../Dropdown/Dropdown';
+import React from 'react';
 import { FormButton } from '../FormButton/FormButton';
 import { GetRecommendations } from '../GetRecommendations/GetRecommendations';
+import { IngredientLocator } from '../IngredientLocator/IngredientLocator';
 
 const { getCocktails, filterCocktails } = GetRecommendations();
-const {liquors, beers, wines, liqueurs, mixers, garnishes, other} = Ingredients;
-const categories = {
-  "Liquors": liquors,
-  "Beers": beers,
-  "Wines": wines,
-  "Liqueurs": liqueurs,
-  "Mixers": mixers,
-  "Garnishes": garnishes,
-  "Other": other
-}
 
 export const Form = ({ onAdd, ingredients, setRecommendations, setLoading, setSubmitted }) => {
-  const [formData, setFormData] = useState({});
-  const [categoryName, setCategoryName] = useState("Liquors");
-  const [category, setCategory] = useState(liquors);
-
-  const handleCategoryChange = (event) => {
-    const id = event.target.value;
-    setCategoryName(id);
-    setCategory(categories[`${id}`]);
-  }
-
-  const handleIngredientChange = (event) => {
-    const {value} = event.target;
-    setFormData(prevFormData => ({ ...prevFormData, "name": value}));
-  }
-
-  const handleIngredientSubmit = (event) => {
-    event.preventDefault();
-    if (formData.name === undefined || formData.name === "") {
-      window.alert("No option selected");
-    }
-    else {
-      onAdd({ ...formData, id: Date.now() });
-    }
-  }
 
   const handleInventorySubmit = async (event) => {
     event.preventDefault();
@@ -58,14 +23,11 @@ export const Form = ({ onAdd, ingredients, setRecommendations, setLoading, setSu
   }
 
   return (
-    <div className="ingredient-locator">
-      <h3 className="section-heading">Add Ingredient</h3>
-      <div className="dropdowns">
-        <Dropdown choices={Object.keys(categories)} choicesName="Ingredient Categories" selectIngredient={handleCategoryChange}/>
-        <Dropdown choices={category} choicesName={categoryName} selectIngredient={handleIngredientChange}/>
-      </div>
-        <FormButton onClick={handleIngredientSubmit} text="Add ingredients to inventory" />
+    <div className="form">
+      <IngredientLocator onAdd={onAdd} />
+      <div className="submit-wrapper">
         <FormButton onClick={handleInventorySubmit} text="Submit inventory" />
+      </div>
     </div>
   );
 }
