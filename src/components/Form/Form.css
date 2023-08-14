@@ -1,0 +1,65 @@
+h2 {
+  margin: 0;
+}
+
+li {
+  max-height: 32px;
+}
+
+button {
+  margin: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  li {
+    height: auto;
+  }
+  li button {
+    margin: 0;
+  }
+}
+
+ul {
+  margin-top: 0;
+}
+
+li button{
+  border: none;
+  width: 10px;
+
+}
+
+li {
+  list-style-type: none;
+}
+
+.remove-button {
+  background-color: transparent;
+  color: #b3a695;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.inventory-list {
+  padding-left: 0;
+}
+
+.ingredient-locator {
+  border-color: #b3a695;
+  border-width: 2px;
+  border-style: solid;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.dropdowns {
+  display: flex;
+  justify-content: space-around;
+}
+

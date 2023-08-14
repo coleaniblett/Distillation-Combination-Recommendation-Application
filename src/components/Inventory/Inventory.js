@@ -3,8 +3,8 @@ import './Inventory.css';
 
 export const Inventory = ({ ingredients, onRemoveIngredient }) => {
   return (
-    <div className="inventory flex-box">
-      <div className="text-box">
+    <div className="inventory">
+      <div className="">
         <h2 className="section-heading">Inventory</h2>
         <ul className="inventory-list">
           <li className="standard-text">

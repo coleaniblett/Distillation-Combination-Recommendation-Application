@@ -1,3 +1,4 @@
+import './Form.css';
 import React, { useState } from 'react';
 import { Ingredients } from '../Ingredients/Ingredients';
 import { Dropdown } from '../Dropdown/Dropdown';
@@ -46,6 +47,7 @@ export const Form = ({ onAdd, ingredients, setRecommendations, setLoading, setSu
     event.preventDefault();
     setRecommendations({});
     setLoading(true);
+    console.log(ingredients);
     const names = ingredients.map(ingredient => ingredient.name.toLowerCase());
     const unfilteredResult = await getCocktails(names);
     const result = await filterCocktails(unfilteredResult, names);
@@ -56,14 +58,14 @@ export const Form = ({ onAdd, ingredients, setRecommendations, setLoading, setSu
   }
 
   return (
-    <div className="form flex-box">
-      <form className="text-box">
-        <h2 className="section-heading">Ingredient Search</h2>
+    <div className="ingredient-locator">
+      <h3 className="section-heading">Add Ingredient</h3>
+      <div className="dropdowns">
         <Dropdown choices={Object.keys(categories)} choicesName="Ingredient Categories" selectIngredient={handleCategoryChange}/>
         <Dropdown choices={category} choicesName={categoryName} selectIngredient={handleIngredientChange}/>
+      </div>
         <FormButton onClick={handleIngredientSubmit} text="Add ingredients to inventory" />
         <FormButton onClick={handleInventorySubmit} text="Submit inventory" />
-      </form>
     </div>
   );
 }

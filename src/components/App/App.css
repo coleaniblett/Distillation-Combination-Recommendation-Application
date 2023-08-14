@@ -20,6 +20,7 @@
 }
 
 .section-heading {
+  padding: 16px;
   color: #b3a695;
   font-family: 'GB Gormand';
   text-decoration: underline;
