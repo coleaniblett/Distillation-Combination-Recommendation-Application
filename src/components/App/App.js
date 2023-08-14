@@ -11,8 +11,7 @@ import { Main } from '../Main/Main';
   3. Add user instructions
   4. UI redesign
   5. Store API key in an environmental variable
-  6. Set background to fixed
-  7. Add minimize button for ingreident locator
+  6. Add minimize button for ingreident locator
 */
 export const App = () => {
   const [recommendations, setRecommendations] = useState({});
