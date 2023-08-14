@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiKey = '9973533';
+const apiKey = process.env.REACT_APP_COCKTAILDB_API_KEY
 
 export const TheCocktailDB = {
 
