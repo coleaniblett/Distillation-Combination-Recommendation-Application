@@ -3,9 +3,9 @@ import './Dropdown.css';
 
 export const Dropdown = ({ choices, choicesName, selectIngredient }) => {
   return (
-    <div className="dropdown">
+    <div className="dropdown ingredient-cell">
       <label htmlFor="dropdown">{choicesName}:</label><br/>
-      <select className="dropdown-select" onChange={selectIngredient}>
+      <select className="dropdown-select cell-text" onChange={selectIngredient}>
         {choices[0] !== "Liquors" && <option value=""></option>}
         {choices.map(choice => <option value={choice} key={choice}>{choice}</option>)}
       </select>

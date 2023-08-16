@@ -15,7 +15,7 @@ export const RecommendationsList = ({ submitted, loading, recommendations }) => 
             }
           </ul>
           {loading? (<div className="loading-message">Loading recommendations...</div>) : ""}
-          {submitted && !loading && Object.keys(recommendations) === 0 ? (<div className="no-recs-message">No recommendations found</div>) : ""}
+          {submitted && !loading && Object.keys(recommendations).length === 0 ? (<div className="no-recs-message">No recommendations found</div>) : ""}
         </div>
       </div>
     </div>

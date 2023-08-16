@@ -4,4 +4,36 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
   cursor: pointer;
+  width: 10%;
+  height: auto;
+}
+
+.inventory-list li {
+  display: flex;
+  width: 90%;
+  align-items: center;
+}
+
+/*.inventory-list li .ingredient-cell {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 0 0 8px;
+  border-color: #b3a695;
+  border-width: 2px;
+  border-style: solid;
+}*/
+
+.inventory-list li {
+  max-height: none;
+  padding-bottom: 0;
+}
+
+.inventory-heading {
+  font-style: italic;
+  font-size: 1rem;
+  margin: .5rem 0;
+}
+
+.button-heading {
+  width: 10%;
 }

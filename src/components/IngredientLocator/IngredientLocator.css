@@ -8,12 +8,16 @@
   border-radius: 10px;
 }
 
+.ingredient-cell {
+  width: 50%;
+}
+
 #ingredient-locator-heading {
   padding: 8px;
   margin: 0;
 }
 
-.user-interface {
+.user-interface, .inner-list-wrapper {
   display: flex;
   align-items: flex-end;
 }

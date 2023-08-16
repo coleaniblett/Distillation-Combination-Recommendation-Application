@@ -37,17 +37,17 @@ export const IngredientLocator = ({ onAdd }) => {
       window.alert("No option selected");
     }
     else {
-      onAdd({ ...formData, id: Date.now() });
+      onAdd({ ...formData, id: Date.now(), "category": categoryName });
     }
   }
   return (
     <div className="ingredient-locator">
       <h3 className="section-heading" id="ingredient-locator-heading">Add Ingredient</h3>
-        <div className="user-interface">
-          <Dropdown choices={Object.keys(categories)} choicesName="Categories" selectIngredient={handleCategoryChange}/>
-          <Dropdown choices={category} choicesName={categoryName} selectIngredient={handleIngredientChange}/>
-          <FormButton onClick={handleIngredientSubmit} text="+" />
-        </div>
+      <div className="user-interface inner-list-wrapper">
+        <Dropdown choices={Object.keys(categories)} choicesName="Categories" selectIngredient={handleCategoryChange}/>
+        <Dropdown choices={category} choicesName={categoryName} selectIngredient={handleIngredientChange}/>
+        <FormButton onClick={handleIngredientSubmit} text="+" />
+      </div>
     </div>
   );
 }
