@@ -27,7 +27,7 @@ ul {
   margin-top: 0;
 }
 
-li button{
+li button, td button{
   border: none;
   width: 10px;
 
@@ -51,4 +51,6 @@ li {
 
 .submit-wrapper {
   margin: 16px;
+  display: flex;
+  justify-content: center;
 }

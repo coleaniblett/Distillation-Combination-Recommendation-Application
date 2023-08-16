@@ -24,9 +24,11 @@ export const Form = ({ onAdd, ingredients, setRecommendations, setLoading, setSu
 
   return (
     <div className="form">
-      <IngredientLocator onAdd={onAdd} />
+        <IngredientLocator onAdd={onAdd} />
       <div className="submit-wrapper">
-        <FormButton onClick={handleInventorySubmit} text="Submit inventory" />
+        <tr>
+          <FormButton onClick={handleInventorySubmit} text="Submit inventory" />
+        </tr>
       </div>
     </div>
   );

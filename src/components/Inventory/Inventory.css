@@ -38,9 +38,24 @@
   width: 10%;
 }
 
+.ingredient-cell {
+  width: 50%;
+}
+
+.right-text {
+  padding-right: 25%;
+}
+
 /* Small breakpoint */
 @media only screen and (max-width: 767px) {
   .inventory-heading {
     font-size: 0.875rem;
+  }
+}
+
+/* X-Small breakpoint */
+@media only screen and (max-width: 575px) {
+  .inventory-heading {
+    font-size: 0.75rem;
   }
 }

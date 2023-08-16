@@ -4,3 +4,13 @@
   max-width: 700px;
   margin: 0 auto;
 }
+
+.main-table, th, td, tr {
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.main-table {
+  width: 100%;
+}

@@ -41,12 +41,17 @@ export const IngredientLocator = ({ onAdd }) => {
     }
   }
   return (
-    <div className="ingredient-locator">
-      <div className="user-interface inner-list-wrapper">
-        <Dropdown choices={Object.keys(categories)} selectIngredient={handleCategoryChange}/>
-        <Dropdown choices={category} selectIngredient={handleIngredientChange}/>
-        <FormButton onClick={handleIngredientSubmit} text="+" />
-      </div>
-    </div>
+    <tr className="">
+      {/*rename user-interface class*/}
+        <td className="ingredient-cell">
+          <Dropdown choices={Object.keys(categories)} selectIngredient={handleCategoryChange}/>
+        </td>
+        <td className="ingredient-cell">
+          <Dropdown choices={category} selectIngredient={handleIngredientChange}/>
+        </td>
+        <td>
+          <FormButton onClick={handleIngredientSubmit} text="+" />
+        </td>
+    </tr>
   );
 }

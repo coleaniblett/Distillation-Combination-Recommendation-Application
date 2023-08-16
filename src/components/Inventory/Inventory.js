@@ -1,41 +1,45 @@
 import React from 'react';
 import './Inventory.css';
+import { FormButton } from '../FormButton/FormButton';
 
 export const Inventory = ({ ingredients, onRemoveIngredient }) => {
   return (
-    <div className="inventory">
-        <h2 className="section-heading">Inventory</h2>
-          <ul className="inventory-list">
-            <li className="standard-text">
-              <div className="ingredient-cell">
-                <h6 className="inventory-heading">CATEGORY</h6>
-              </div>
-              <div className="ingredient-cell">
-                <h6 className="inventory-heading">INGREDIENT</h6>
-              </div>
-              <h6 className="inventory-heading button-heading">REMOVE</h6>
-            </li>
-            <li className="standard-text">
-              <div className="ingredient-cell">
-                <p className="cell-text">Other</p>
-              </div>
-              <div className="ingredient-cell">
-                <p className="cell-text">Water</p>
-              </div>
-              <button className="remove-button" onClick={() => window.alert("If you don't have water, maybe you shouldn't be drinking?")}>X</button>
-            </li>
-            {ingredients.map(ingredient => (
-              <li key={ingredient.id} className="standard-text inner-list-wrapper">
-                <div className="ingredient-cell">
-                  <p className="cell-text">{ingredient.category}</p>
-                </div>
-                <div className="ingredient-cell">
-                  <p className="cell-text">{ingredient.name}</p>
-                </div>
-                <button className="remove-button" onClick={() => onRemoveIngredient(ingredient.id)}>X</button>
-              </li>
-            ))}
-          </ul>
-        </div>
+    <tr className="inventory standard-text">
+      <td>
+      <tr>
+        <th className="inventory-heading">Category</th>
+        <th className="inventory-heading">Ingredient</th>
+        <th className="inventory-heading">Remove</th>
+      </tr>
+      <tr>
+      <td className="ingredient-cell">
+          <p className="cell-text left-text">Other</p>
+        </td>
+        <td className="ingredient-cell">
+          <p className="cell-text right-text">Water</p>
+        </td>
+        <td>
+          <FormButton 
+            onClick={() => window.alert("If you don't have water, maybe you shouldn't be drinking?")}
+            text="-"
+          />
+        </td>
+      </tr>
+      {ingredients.map(ingredient => (
+        <tr key={ingredient.id} className="standard-text inner-list-wrapper">
+          <td className="ingredient-cell">
+            {ingredient.category}
+          </td>
+          <td className="ingredient-cell">
+            <p className="cell-text right-text">{ingredient.name}</p>
+          </td>
+          <td>                
+            <FormButton onClick={() => onRemoveIngredient(ingredient.id)} text="-" />
+
+          </td>              
+        </tr>
+      ))}
+      </td>
+    </tr>
   );
 };

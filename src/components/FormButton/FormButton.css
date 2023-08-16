@@ -15,3 +15,16 @@
   cursor: pointer;
   font-style: italic;
 }
+
+/* Small breakpoint */
+@media only screen and (max-width: 767px) {
+  
+}
+
+/* X-Small breakpoint */
+@media only screen and (max-width: 575px) {
+  .submission-button {
+    font-size: 0.75rem;
+    padding: 8px 12px;
+  }
+}
