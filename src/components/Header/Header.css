@@ -43,6 +43,7 @@
 }
 
 .header {
+  padding-top: 2rem;
   color: #b3a695;
   font-family:'EB Garamond', 'Adobe Garamond', Georgia;
   font-style: italic;
