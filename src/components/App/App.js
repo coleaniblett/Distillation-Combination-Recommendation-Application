@@ -8,10 +8,7 @@ import { Main } from '../Main/Main';
     TO-DO
   1. Review ingredients
   2. Develop two additional recommendation lists (one-ingredient-away and fine-without-garnish)
-  3. Add user instructions
-  4. Add minimize button for ingreident locator
-  5. Fix issue with "no recommendations found" not displaying
-  6. Better responsiveness from heading;
+  3. Better responsiveness from heading;
 */
 export const App = () => {
   const [recommendations, setRecommendations] = useState({});

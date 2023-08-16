@@ -1,5 +1,5 @@
 .dropdown {
-  width: 50%;
+  width: 40.5%;
 }
 
 label {
@@ -9,7 +9,7 @@ label {
 }
 
 .dropdown-select {
-  width: 80%;
+  width: 70%;
   padding: 12px 20px;
   margin: 0 0 8px;
   box-sizing: border-box;
