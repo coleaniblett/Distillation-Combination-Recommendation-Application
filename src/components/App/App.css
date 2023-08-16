@@ -10,6 +10,12 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+/* Small breakpoint */
+@media only screen and (max-width: 767px) {
+  .App {
+    padding: 0;
+  }
+}
 
 .text-box {
   background-color: rgba(63, 1, 35, 0.7);
@@ -26,7 +32,12 @@
   color: #b3a695;
   font-family: 'GB Gormand';
   text-decoration: underline;
-  
+}
+/* Small breakpoint */
+@media only screen and (max-width: 767px) {
+  .section-heading {
+    font-size: 1.25rem;
+  }
 }
 
 .standard-text {
