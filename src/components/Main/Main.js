@@ -8,10 +8,8 @@ export const Main = ({ onAdd, ingredients, setRecommendations, setLoading, setSu
   return (
     <div className="main">
       <h2 className="section-heading">Inventory</h2>
-      <table className="main-table">
-        <Inventory ingredients={ingredients} onRemoveIngredient={onRemoveIngredient} />
-        <Form ingredients={ingredients} onAdd={onAdd} setRecommendations={setRecommendations} setLoading={setLoading} setSubmitted={setSubmitted} />
-      </table>
+      <Inventory ingredients={ingredients} onRemoveIngredient={onRemoveIngredient} />
+      <Form ingredients={ingredients} onAdd={onAdd} setRecommendations={setRecommendations} setLoading={setLoading} setSubmitted={setSubmitted} />
       <RecommendationsList submitted={submitted} loading={loading} recommendations={recommendations} />
     </div>
   );

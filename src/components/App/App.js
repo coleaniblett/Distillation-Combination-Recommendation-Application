@@ -9,7 +9,6 @@ import { Footer } from '../Footer/Footer';
     TO-DO
   1. Review ingredients
   2. Develop two additional recommendation lists (one-ingredient-away and fine-without-garnish)
-  3. Better responsiveness from heading;
 */
 export const App = () => {
   const [recommendations, setRecommendations] = useState({});
