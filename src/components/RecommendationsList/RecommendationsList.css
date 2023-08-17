@@ -1,13 +1,12 @@
 .recommendations-list {
   margin: auto;
-  width: 80%;
+  width: 100%;
 }
 
-@media only screen and (max-width: 1150px) {
-  .recommendations-list {
-    max-width: 70%;
-    margin: auto;
-  }
+
+
+ul {
+  padding: 0;
 }
 
 .loading-message, .no-recs-message {
