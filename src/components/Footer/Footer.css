@@ -1,0 +1,12 @@
+footer {
+  background-color: rgba(63, 1, 35, 1);
+  width: 100%;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 4rem;
+  margin-bottom: 0;
+}

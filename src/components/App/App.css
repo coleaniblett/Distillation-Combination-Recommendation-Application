@@ -3,12 +3,14 @@
   min-height: 100vh;
   text-align: center;
   margin: auto;
-  padding: 0 10% 0 10%;
   background-image: url('../../../public/igor-stepanov-rNKKUsIJNd4-unsplash.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 /* Small breakpoint */
 @media only screen and (max-width: 767px) {

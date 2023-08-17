@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { UseIngredients } from '../UseIngredients/UseIngredients';
 import { Header } from '../Header/Header';
 import { Main } from '../Main/Main';
+import { Footer } from '../Footer/Footer';
 
 /*
     TO-DO
@@ -19,18 +20,21 @@ export const App = () => {
 
   return (
     <div className="App">
-      <Header />
-      <Main
-        onAdd={addIngredient} 
-        ingredients={ingredients} 
-        setRecommendations={setRecommendations} 
-        setLoading={setLoading} 
-        setSubmitted={setSubmitted}
-        onRemoveIngredient={removeIngredient} 
-        submitted={submitted} 
-        loading={loading} 
-        recommendations={recommendations}
-      />
+      <div className="main-content-wrapper">
+        <Header />
+        <Main
+          onAdd={addIngredient} 
+          ingredients={ingredients} 
+          setRecommendations={setRecommendations} 
+          setLoading={setLoading} 
+          setSubmitted={setSubmitted}
+          onRemoveIngredient={removeIngredient} 
+          submitted={submitted} 
+          loading={loading} 
+          recommendations={recommendations}
+        />
+      </div>
+      <Footer />
     </div>
   );
 }
