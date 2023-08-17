@@ -7,9 +7,9 @@ export const Inventory = ({ ingredients, onRemoveIngredient }) => {
     <tr className="inventory standard-text">
       <td>
       <tr>
-        <th className="inventory-heading">Category</th>
-        <th className="inventory-heading">Ingredient</th>
-        <th className="inventory-heading">Remove</th>
+        <th className="ingredient-cell inventory-heading cell-text left-heading">Category</th>
+        <th className="ingredient-cell inventory-heading cell-text right-heading">Ingredient</th>
+        <th className="ingredient-cell inventory-heading">Remove</th>
       </tr>
       <tr>
       <td className="ingredient-cell">

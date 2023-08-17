@@ -34,6 +34,7 @@
   margin: .5rem 0;
 }
 
+
 .button-heading {
   width: 10%;
 }
@@ -42,9 +43,6 @@
   width: 50%;
 }
 
-.right-text {
-  padding-right: 25%;
-}
 
 /* Small breakpoint */
 @media only screen and (max-width: 767px) {

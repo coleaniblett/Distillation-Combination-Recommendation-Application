@@ -16,6 +16,7 @@ label {
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
   appearance: none;
+  text-align: center;
 }
 
 /* Small breakpoint */
