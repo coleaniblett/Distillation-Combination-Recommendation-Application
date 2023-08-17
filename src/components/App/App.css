@@ -17,16 +17,6 @@
   }
 }
 
-.text-box {
-  background-color: rgba(63, 1, 35, 0.7);
-  width: 100%;
-  max-width: 700px;
-  margin: 16px auto;
-  padding: 8px 0;
-  height: 500px;
-  overflow-y: scroll;
-}
-
 .section-heading {
   padding: 16px;
   color: #b3a695;
@@ -43,37 +33,4 @@
 .standard-text {
   color: #b3a695;
   font-family: 'GB Gormand';
-}
-
-li {
-  padding-bottom: 8px;
-  min-height: 32px;
-  position: relative;
-}
-
-.App-main {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.flex-box {
-  display: flex;
-  flex-direction: column;
-  width: 32%;
-}
-
-@media only screen and (max-width: 1150px) {
-  .App-main {
-    align-items: center;
-    flex-direction: column;
-  }
-  .flex-box {
-    width: 100%;
-  }
-}
-
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
 }

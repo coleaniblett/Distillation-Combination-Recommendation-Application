@@ -20,19 +20,17 @@ export const App = () => {
   return (
     <div className="App">
       <Header />
-      <div className="App-main">
-        <Main
-          onAdd={addIngredient} 
-          ingredients={ingredients} 
-          setRecommendations={setRecommendations} 
-          setLoading={setLoading} 
-          setSubmitted={setSubmitted}
-          onRemoveIngredient={removeIngredient} 
-          submitted={submitted} 
-          loading={loading} 
-          recommendations={recommendations}
-        />
-      </div>
+      <Main
+        onAdd={addIngredient} 
+        ingredients={ingredients} 
+        setRecommendations={setRecommendations} 
+        setLoading={setLoading} 
+        setSubmitted={setSubmitted}
+        onRemoveIngredient={removeIngredient} 
+        submitted={submitted} 
+        loading={loading} 
+        recommendations={recommendations}
+      />
     </div>
   );
 }

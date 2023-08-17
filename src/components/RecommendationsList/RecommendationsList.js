@@ -4,7 +4,7 @@ import { Recommendation } from '../Recommendation/Recommendation';
 
 export const RecommendationsList = ({ submitted, loading, recommendations }) => {
   return (
-    <div className="recommendations-list flex-box">
+    <div className="recommendations-list">
       <div className="">
         <div className="ready-to-make recommendations-list">
           <h2 className="section-heading">Recommendations</h2>
