@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Distillation-Combination-Recommendation-Application/static/css/main.cf125901.css",
-    "main.js": "/Distillation-Combination-Recommendation-Application/static/js/main.ef914b3e.js",
+    "main.css": "/Distillation-Combination-Recommendation-Application/static/css/main.b722680f.css",
+    "main.js": "/Distillation-Combination-Recommendation-Application/static/js/main.65b008c4.js",
     "static/media/igor-stepanov-rNKKUsIJNd4-unsplash.jpg": "/Distillation-Combination-Recommendation-Application/static/media/igor-stepanov-rNKKUsIJNd4-unsplash.dd1fd2ff78d83b862e3d.jpg",
     "index.html": "/Distillation-Combination-Recommendation-Application/index.html",
-    "main.cf125901.css.map": "/Distillation-Combination-Recommendation-Application/static/css/main.cf125901.css.map",
-    "main.ef914b3e.js.map": "/Distillation-Combination-Recommendation-Application/static/js/main.ef914b3e.js.map"
+    "main.b722680f.css.map": "/Distillation-Combination-Recommendation-Application/static/css/main.b722680f.css.map",
+    "main.65b008c4.js.map": "/Distillation-Combination-Recommendation-Application/static/js/main.65b008c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf125901.css",
-    "static/js/main.ef914b3e.js"
+    "static/css/main.b722680f.css",
+    "static/js/main.65b008c4.js"
   ]
 }
