@@ -7,7 +7,7 @@ export const RecommendationsList = ({ submitted, loading, recommendations }) => 
     <div className="recommendations-list">
       <div className="">
         <div className="ready-to-make recommendations-list">
-          <h2 className="section-heading">Recommendations</h2>
+          {submitted && (<h2 className="section-heading">Recommendations</h2>)}
           <ul>
             {Object.keys(recommendations).map(recommendation => (
               <Recommendation key={recommendation} name={recommendation} cocktail={recommendations[recommendation]} />
