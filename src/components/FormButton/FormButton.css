@@ -3,7 +3,7 @@
 }
 
 .submission-button {
-  padding: 12px 24px 12px 16px;
+  padding: 10px 20px;
   margin: 8px 8px;
   box-sizing: border-box;
   border: 2px solid #b3a695;
@@ -16,15 +16,16 @@
   font-style: italic;
 }
 
-/* Small breakpoint */
-@media only screen and (max-width: 767px) {
-  
+.button-text-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 /* X-Small breakpoint */
 @media only screen and (max-width: 575px) {
   .submission-button {
     font-size: 0.75rem;
-    padding: 8px 12px;
+    padding: 6px 12px;
   }
 }
