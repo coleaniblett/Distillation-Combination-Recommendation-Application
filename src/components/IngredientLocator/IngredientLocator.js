@@ -41,10 +41,9 @@ export const IngredientLocator = ({ onAdd }) => {
     }
   }
   return (
-    <table>
+    <table className="ingredient-locator">
       <tbody>
-        <tr className="">
-        {/*rename user-interface class*/}
+        <tr>
           <td className="ingredient-cell">
             <Dropdown choices={Object.keys(categories)} selectIngredient={handleCategoryChange}/>
           </td>
