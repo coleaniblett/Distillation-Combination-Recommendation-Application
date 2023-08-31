@@ -1,15 +1,10 @@
 import './App.css';
 import React, { useState } from 'react';
-import { UseIngredients } from '../UseIngredients/UseIngredients';
+import { UseIngredients } from '../../utilities/UseIngredients';
 import { Header } from '../Header/Header';
 import { Main } from '../Main/Main';
 import { Footer } from '../Footer/Footer';
 
-/*
-    TO-DO
-  1. Review ingredients
-  2. Develop two additional recommendation lists (one-ingredient-away and fine-without-garnish)
-*/
 export const App = () => {
   const [recommendations, setRecommendations] = useState({});
   const [submitted, setSubmitted] = useState(false);
