@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 
-export const UseIngredients = () => {
+export const useIngredients = () => {
   const [ingredients, setIngredients] = useState([]);
 
   const addIngredient = useCallback(ingredient => {
