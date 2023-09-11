@@ -1,4 +1,4 @@
-import { TheCocktailDB } from '../../util/TheCocktailDB';
+import { TheCocktailDB } from '../../utilities/TheCocktailDB';
 import { IngredientGeneralizer } from '../IngredientGeneralizer/IngredientGeneralizer';
 
 export const GetRecommendations = () => {

@@ -1,6 +1,6 @@
 .recommendation {
-  position: relative;
-  right: 16px;
+  max-width: 90%;
+  margin: auto;
 }
 
 .recommendation-title {
@@ -14,6 +14,6 @@
   border-radius: 4px;
   background-color: transparent;
   color: #b3a695;
-  margin-left: 32px;
+  margin-right: 16px;
   float: right;
 }

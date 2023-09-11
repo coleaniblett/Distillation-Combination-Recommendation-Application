@@ -6,11 +6,13 @@ import { IngredientGeneralizer } from '../IngredientGeneralizer/IngredientGenera
 export const Recommendations = ({ ingredients }) => {
   const [cocktails, setCocktails] = useState([]);
   const [loading, setLoading] = useState(true);
+
   const names = ingredients.map(ingredient => ingredient.name.toLowerCase());
   const ingredientGeneralizer = IngredientGeneralizer;
-  // water and various garnishes are to be ignored as ingredients
+  // water and various garnishes are to be ignored when determining recommendations
   const ingredientsToIgnore = ["water", "lemon", "lemon peel", "lime", "lime peel"];
 
+  // This doesn't seem to actually get called?
   useEffect(() => {
     console.log("useEffect is called");
 
