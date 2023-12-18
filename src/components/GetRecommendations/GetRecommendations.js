@@ -7,34 +7,34 @@ export const GetRecommendations = () => {
 
   const getCocktails = async (names) => {
     const cocktails = {};
-    for (const name of names) {
+    await Promise.all(names.map(async (name) => {
       const response = await TheCocktailDB.getCocktails(name);
       if (response.data.drinks !== "None Found") {
-        for (const drink of response.data.drinks) {
+        await Promise.all(response.data.drinks.map(async (drink) => {
           if (!cocktails[drink.strDrink]) {
             cocktails[drink.strDrink] = await TheCocktailDB.getCocktail(drink.strDrink);
           }
-        }
+        }));
       }
-    }
+    }));
     return cocktails;
   }
 
   const filterCocktails = async (cocktails, names) => {
-    for (const cocktail of Object.keys(cocktails)) {
+    await Promise.all(Object.keys(cocktails).map(async (cocktail) => {
       const cocktailIngredients = await getCocktailIngredients(cocktail);
-      for (let cocktailIngredient of cocktailIngredients) {
+      await Promise.all(cocktailIngredients.map(async (cocktailIngredient) => {
         if (ingredientGeneralizer[cocktailIngredient]) {
           console.log(`Generalizing ingredient ${cocktailIngredient}`);
-          cocktailIngredient = IngredientGeneralizer[cocktailIngredient];
+          cocktailIngredient = ingredientGeneralizer[cocktailIngredient];
         }
         if (!names.includes(cocktailIngredient) && !ingredientsToIgnore.includes(cocktailIngredient)) {
           delete cocktails[cocktail];
         }
-      }
-    }
+      }));
+    }));
     return cocktails;
-  }
+  };
 
   const getCocktailIngredients = async (cocktail) => {
     const cocktailIngredients = [];
